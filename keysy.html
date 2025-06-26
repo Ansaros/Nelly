@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейсы - Nelly dental clinic</title>
+    
+    <!-- Шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Основные стили проекта -->
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+    <!-- ─────── Top Bar ─────── -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot icon"></i>
+                    <span class="top">Улы Дала, 35, Город Астана</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock icon"></i>
+                    <span class="top">Пн-Пт 10:00-19:00  Сб, Вс 10:00-16:00</span>
+                </div>
+                <div class="info-item phone">
+                    <i class="fa-solid fa-phone icon"></i>
+                    <span>+7 705 402 61 81</span>
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/nelly_dental/" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/77054026181" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────── Header ─────── -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Логотип -->
+            <div class="logo">
+                <a href="index.html">Nelly<span>dental clinic</span></a>
+            </div>
+
+            <!-- Основная навигация (десктоп) -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="ceny.html">ЦЕНЫ</a></li>
+                    <li><a href="keysy.html" class="active">КЕЙСЫ</a></li>
+                    <li><a href="vrachi.html">ВРАЧИ</a></li>
+                    <li><a href="kontakty.html">КОНТАКТЫ</a></li>
+                    <li><a href="media.html">МЕДИА</a></li>
+                </ul>
+            </nav>
+
+            <!-- Бургер-меню -->
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Оверлей для мобильного меню -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Мобильное меню -->
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="close-menu" id="closeMenu">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <div class="mobile-nav-content">
+            <div class="mobile-logo">
+                <span>Nelly</span>
+                <small>dental clinic</small>
+            </div>
+            <ul>
+                <li><a href="ceny.html"><i class="fa-solid fa-ruble-sign"></i>Цены</a></li>
+                <li><a href="keysy.html"><i class="fa-solid fa-images"></i>Кейсы</a></li>
+                <li><a href="vrachi.html"><i class="fa-solid fa-user-doctor"></i>Врачи</a></li>
+                <li><a href="kontakty.html"><i class="fa-solid fa-phone"></i>Контакты</a></li>
+                <li><a href="media.html"><i class="fa-solid fa-play"></i>Медиа</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <a href="tel:+77054026181" class="mobile-phone">
+                    <i class="fa-solid fa-phone"></i>
+                    +7 705 402 61 81
+                </a>
+                <div class="mobile-social">
+                    <a href="https://www.instagram.com/nelly_dental/" class="mobile-social-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/77054026181" class="mobile-social-link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ─────── Beautiful Hero Section ─────── -->
+    <section class="cases-hero-beautiful">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content-beautiful">
+                <div class="hero-text-beautiful">
+                    <div class="breadcrumb-beautiful">
+                        <a href="index.html">Главная</a>
+                        <span class="separator">✦</span>
+                        <span>Кейсы лечения</span>
+                    </div>
+                    
+                    <h1 class="hero-title-beautiful">
+                        <span class="title-word" data-text="ИСТОРИИ">ИСТОРИИ</span>
+                        <span class="title-word" data-text="УСПЕХА">УСПЕХА</span>
+                        <span class="title-accent">наших пациентов</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle-beautiful">
+                        Каждая улыбка — это уникальная история преображения. 
+                        Посмотрите на реальные результаты работы наших специалистов.
+                    </p>
+                    
+                    <div class="hero-stats-beautiful">
+                        <div class="stat-beautiful" data-count="500">
+                            <div class="stat-number">0+</div>
+                            <div class="stat-label">Успешных случаев</div>
+                        </div>
+                        <div class="stat-beautiful" data-count="98">
+                            <div class="stat-number">0%</div>
+                            <div class="stat-label">Довольных пациентов</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual-beautiful">
+                    <div class="showcase-container">
+                        <div class="showcase-main">
+                            <div class="before-after-showcase">
+                                <div class="showcase-image before">
+                                    <img src="img/do6.jfif" alt="До лечения">
+                                    <div class="image-label">ДО</div>
+                                </div>
+                                <div class="showcase-divider">
+                                    <div class="divider-line"></div>
+                                    <div class="divider-icon">✨</div>
+                                </div>
+                                <div class="showcase-image after">
+                                    <img src="img/posle6.jfif" alt="После лечения">
+                                    <div class="image-label">ПОСЛЕ</div>
+                                </div>
+                            </div>
+                            <div class="showcase-info">
+                                <h3>Коронки цирконевые</h3>
+                                <div class="showcase-tags">
+                                    <span class="tag">E-max</span>
+                                    <span class="tag">Коронки</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="showcase-thumbnails">
+                            <div class="thumbnail active" data-case="1">
+                                <img src="img/posle6.jfif" alt="Кейс 1">
+                            </div>
+                            <div class="thumbnail" data-case="2">
+                                <img src="img/posle7.jfif" alt="Кейс 2">
+                            </div>
+                            <div class="thumbnail" data-case="3">
+                                <img src="img/posle3.png" alt="Кейс 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ─────── Cases Gallery ─────── -->
+    <section class="cases-gallery-beautiful">
+        <div class="container">
+            <div class="cases-grid-beautiful">
+                <!-- Case 1: Complex Restoration -->
+                <div class="case-card-beautiful featured" data-category="veneers implants">
+                    <div class="case-image-beautiful">
+                        <div class="before-after-slider">
+                            <div class="slider-image before-img">
+                                <img src="img/do5.jpeg" alt="До лечения">
+                                <div class="image-overlay">ДО</div>
+                            </div>
+                            <div class="slider-image after-img">
+                                <img src="img/posle5.jpeg" alt="После лечения">
+                                <div class="image-overlay">ПОСЛЕ</div>
+                            </div>
+                            <div class="slider-handle">
+                                <div class="handle-button">⟷</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="case-content-beautiful">
+                        <div class="case-header-beautiful">
+                            <h3>Имплантация с протезированием</h3>
+                            <div class="case-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <p class="case-description">Восстановление утраченного зуба с помощью дентального импланта и последующего протезирования коронкой.</p>
+                        <div class="case-details-beautiful">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>3 месяца</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-user-doctor"></i>
+                                <span>Нелли Ринатовна</span>
+                            </div>
+                        </div>
+                        <div class="case-tags-beautiful">
+                            <span class="tag primary">Виниры E-max</span>
+                            <span class="tag">Имплантация</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2: Orthodontics -->
+                <div class="case-card-beautiful" data-category="orthodontics">
+                    <div class="case-image-beautiful">
+                        <div class="before-after-slider">
+                            <div class="slider-image before-img">
+                                <img src="img/do7.jfif" alt="До лечения">
+                                <div class="image-overlay">ДО</div>
+                            </div>
+                            <div class="slider-image after-img">
+                                <img src="img/posle7.jfif" alt="После лечения">
+                                <div class="image-overlay">ПОСЛЕ</div>
+                            </div>
+                            <div class="slider-handle">
+                                <div class="handle-button">⟷</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-content-beautiful">
+                        <div class="case-header-beautiful">
+                            <h3>Закрытие тремы брекетами</h3>
+                            <div class="case-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <p class="case-description">Эстетическое закрытие тремы между передними зубами с помощью ортодонтического лечения брекет-системой.</p>
+                        <div class="case-details-beautiful">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>18 месяцев</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-user-doctor"></i>
+                                <span>Акмарал Айдарбековна</span>
+                            </div>
+                        </div>
+                        <div class="case-tags-beautiful">
+                            <span class="tag primary">Брекеты</span>
+                            <span class="tag">Ортодонтия</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3: Therapy -->
+                <div class="case-card-beautiful" data-category="therapy">
+                    <div class="case-image-beautiful">
+                        <div class="before-after-slider">
+                            <div class="slider-image before-img">
+                                <img src="img/do4.jfif" alt="До лечения">
+                                <div class="image-overlay">ДО</div>
+                            </div>
+                            <div class="slider-image after-img">
+                                <img src="img/posle4.jfif" alt="После лечения">
+                                <div class="image-overlay">ПОСЛЕ</div>
+                            </div>
+                            <div class="slider-handle">
+                                <div class="handle-button">⟷</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-content-beautiful">
+                        <div class="case-header-beautiful">
+                            <h3>Лечение кариеса</h3>
+                            <div class="case-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <p class="case-description">Восстановление зуба с помощью современных композитных материалов.</p>
+                        <div class="case-details-beautiful">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>1 визит</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-user-doctor"></i>
+                                <span>Мерей Амирулловна</span>
+                            </div>
+                        </div>
+                        <div class="case-tags-beautiful">
+                            <span class="tag primary">Пломбы</span>
+                            <span class="tag">Терапия</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 4: Veneers -->
+                <div class="case-card-beautiful" data-category="veneers">
+                    <div class="case-image-beautiful">
+                        <div class="before-after-slider">
+                            <div class="slider-image before-img">
+                                <img src="img/do6.jfif" alt="До лечения">
+                                <div class="image-overlay">ДО</div>
+                            </div>
+                            <div class="slider-image after-img">
+                                <img src="img/posle6.jfif" alt="После лечения">
+                                <div class="image-overlay">ПОСЛЕ</div>
+                            </div>
+                            <div class="slider-handle">
+                                <div class="handle-button">⟷</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="case-content-beautiful">
+                        <div class="case-header-beautiful">
+                            <h3>Коронки цирконевые</h3>
+                            <div class="case-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <p class="case-description">Прочные и эстетичные зубные коронки из диоксид циркония, имитирующие натуральные зубы.</p>
+                        <div class="case-details-beautiful">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>2 недели</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-user-doctor"></i>
+                                <span>Нелли Ринатовна</span>
+                            </div>
+                        </div>
+                        <div class="case-tags-beautiful">
+                            <span class="tag primary">Коронки</span>
+                            <span class="tag">E-max</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 5: Implants -->
+                <div class="case-card-beautiful" data-category="implants">
+                    <div class="case-image-beautiful">
+                        <div class="before-after-slider">
+                            <div class="slider-image before-img">
+                                <img src="img/do8.jfif" alt="До лечения">
+                                <div class="image-overlay">ДО</div>
+                            </div>
+                            <div class="slider-image after-img">
+                                <img src="img/posle8.jfif" alt="После лечения">
+                                <div class="image-overlay">ПОСЛЕ</div>
+                            </div>
+                            <div class="slider-handle">
+                                <div class="handle-button">⟷</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="case-content-beautiful">
+                        <div class="case-header-beautiful">
+                            <h3>Восстановление жевательной поверхности</h3>
+                            <div class="case-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <p class="case-description">Устранение кариеса с восстановлением естественной формы и функции жевательной поверхности зуба.</p>
+                        <div class="case-details-beautiful">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>1 визит</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-user-doctor"></i>
+                                <span>Альмира Акылбековна</span>
+                            </div>
+                        </div>
+                        <div class="case-tags-beautiful">
+                            <span class="tag primary">Пломбы</span>
+                            <span class="tag">Терапия</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 6: Whitening -->
+                <div class="case-card-beautiful" data-category="whitening">
+                    <div class="case-image-beautiful">
+                        <div class="before-after-slider">
+                            <div class="slider-image before-img">
+                                <img src="img/do9.jfif" alt="До лечения">
+                                <div class="image-overlay">ДО</div>
+                            </div>
+                            <div class="slider-image after-img">
+                                <img src="img/posle9.jfif" alt="После лечения">
+                                <div class="image-overlay">ПОСЛЕ</div>
+                            </div>
+                            <div class="slider-handle">
+                                <div class="handle-button">⟷</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="case-content-beautiful">
+                        <div class="case-header-beautiful">
+                            <h3>Пломбировка фотополимером</h3>
+                            <div class="case-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <p class="case-description">Восстановление зуба с использованием светотвердеющего фотополимерного материала для прочности и эстетики.</p>
+                        <div class="case-details-beautiful">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>1 визит</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-user-doctor"></i>
+                                <span>Нелли Ринатовна</span>
+                            </div>
+                        </div>
+                        <div class="case-tags-beautiful">
+                            <span class="tag primary">Терапия</span>
+                            <span class="tag">Реставрация</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more-beautiful">
+                <button class="load-more-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Показать еще кейсы
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Patient Stories ─────── -->
+    <section class="patient-stories-beautiful">
+        <div class="container">
+            <div class="stories-header-beautiful">
+                <h2>Истории наших пациентов</h2>
+                <p>Читайте реальные отзывы людей, которые изменили свою жизнь благодаря красивой улыбке</p>
+            </div>
+            
+            <div class="stories-carousel">
+                <div class="story-card-beautiful">
+                    <div class="story-avatar">
+                        <img src="img/avatar.jpg" alt="Дилара">
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <blockquote>
+                            "Нужно было экстренно лечить зуб и искала ближайшую стоматологию. Очень высокий сервис, администратор, врач все очень эмпатичные люди. Вылечили очень тщательно. Цена- качество абсолютно соответствует. Плюс после лечения узнавали как самочувствие. Однозначно буду постоянным клиентом 😻"
+                        </blockquote>
+                        <div class="story-author">
+                            <h4>Дилара</h4>
+                            <p>Лечение кариеса</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card-beautiful">
+                    <div class="story-avatar">
+                        <img src="img/avatar.jpg" alt="Айнагуль">
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <blockquote>
+                            "Очень нравится доктор Нелли Ринатовна. Такое доброе сердце и золотые руки. Желаю процветания клинике. Кстати приезжаю я с Кокшетау"
+                        </blockquote>
+                        <div class="story-author">
+                            <h4>Айнагуль Бейсембаева</h4>
+                            <p>Лечение кариеса</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card-beautiful">
+                    <div class="story-avatar">
+                        <img src="img/avatar.jpg" alt="Fol Man">
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <blockquote>
+                            "Отличная стоматология. Вылечил себе здесь 10 зубов наверное, суммарно. Выбрал её после прохождения консультаций в 5 соседних клиниках. Ни разу не пожалел. Доктора настоящие профессионалы, все зубы сделали на вид как родные."
+                        </blockquote>
+                        <div class="story-author">
+                            <h4>Fol Man</h4>
+                            <p>Комплексное лечение</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ─────── Beautiful CTA ─────── -->
+    <section class="cta-beautiful">
+        <div class="cta-background">
+            <div class="cta-shapes">
+                <div class="cta-shape cta-shape-1"></div>
+                <div class="cta-shape cta-shape-2"></div>
+                <div class="cta-shape cta-shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="cta-content-beautiful">
+                <div class="cta-text-beautiful">
+                    <h2>Готовы к преображению?</h2>
+                    <p>Запишитесь на бесплатную консультацию и узнайте, как мы можем изменить вашу улыбку</p>
+                    
+                    <div class="cta-benefits-beautiful">
+                        <div class="benefit-beautiful">
+                            <div class="benefit-icon">✓</div>
+                            <span>Бесплатная консультация и план лечения</span>
+                        </div>
+                        <div class="benefit-beautiful">
+                            <div class="benefit-icon">✓</div>
+                            <span>3D-моделирование будущей улыбки</span>
+                        </div>
+                        <div class="benefit-beautiful">
+                            <div class="benefit-icon">✓</div>
+                            <span>Гарантия на все виды работ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-action-beautiful">
+                    <a href="kontakty.html" class="cta-btn-beautiful">
+                        <span>Записаться на консультацию</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <div class="cta-contact-beautiful">
+                        <span>Или позвоните:</span>
+                        <a href="tel:+77054026181">+7 705 402 61 81</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Footer ─────── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <a href="index.html">Nelly dental clinic</a>
+                    </div>
+                    <p>Стоматология 5 звезд</p>
+                    <p>Улы Дала, 35, Город Астана</p>
+                    <p>Пн-Пт 10:00-19:00  Сб, Вс 10:00-16:00</p>
+                    <p>+7 705 402 61 81</p>
+                </div>
+
+                <div class="footer-nav">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="ceny.html">Цены</a></li>
+                        <li><a href="keysy.html">Кейсы</a></li>
+                        <li><a href="vrachi.html">Врачи</a></li>
+                        <li><a href="kontakty.html">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/77054026181" class="social-link">WhatsApp</a>
+                        <a href="https://www.instagram.com/nelly_dental/" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Nelly dental clinic. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ─────── JS ─────── -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медиа - Nelly dental clinic</title>
+    
+    <!-- Шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Основные стили проекта -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ─────── Top Bar ─────── -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot icon"></i>
+                    <span class="top">Улы Дала, 35, Город Астана</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock icon"></i>
+                    <span class="top">Пн-Пт 10:00-19:00  Сб, Вс 10:00-16:00</span>
+                </div>
+                <div class="info-item phone">
+                    <i class="fa-solid fa-phone icon"></i>
+                    <span>+7 705 402 61 81</span>
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/nelly_dental/" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/77054026181" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────── Header ─────── -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Логотип -->
+            <div class="logo">
+                <a href="index.html">Nelly<span>dental clinic</span></a>
+            </div>
+
+            <!-- Основная навигация (десктоп) -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="ceny.html">ЦЕНЫ</a></li>
+                    <li><a href="keysy.html">КЕЙСЫ</a></li>
+                    <li><a href="vrachi.html">ВРАЧИ</a></li>
+                    <li><a href="kontakty.html">КОНТАКТЫ</a></li>
+                    <li><a href="media.html" class="active">МЕДИА</a></li>
+                </ul>
+            </nav>
+
+            <!-- Бургер-меню -->
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Оверлей для мобильного меню -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Мобильное меню -->
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="close-menu" id="closeMenu">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <div class="mobile-nav-content">
+            <div class="mobile-logo">
+                <span>Nelly</span>
+                <small>dental clinic</small>
+            </div>
+            <ul>
+                <li><a href="ceny.html"><i class="fa-solid fa-ruble-sign"></i>Цены</a></li>
+                <li><a href="keysy.html"><i class="fa-solid fa-images"></i>Кейсы</a></li>
+                <li><a href="vrachi.html"><i class="fa-solid fa-user-doctor"></i>Врачи</a></li>
+                <li><a href="kontakty.html"><i class="fa-solid fa-phone"></i>Контакты</a></li>
+                <li><a href="media.html"><i class="fa-solid fa-play"></i>Медиа</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <a href="tel:+77054026181" class="mobile-phone">
+                    <i class="fa-solid fa-phone"></i>
+                    +7 705 402 61 81
+                </a>
+                <div class="mobile-social">
+                    <a href="https://www.instagram.com/nelly_dental/" class="mobile-social-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/77054026181" class="mobile-social-link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ─────── Beautiful Hero Section ─────── -->
+    <section class="media-hero-beautiful">
+        <div class="hero-background-media">
+            <div class="floating-media-shapes">
+                <div class="media-shape media-shape-1">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="media-shape media-shape-2">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <div class="media-shape media-shape-3">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
+                <div class="media-shape media-shape-4">
+                    <i class="fa-solid fa-film"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content-media">
+                <div class="breadcrumb-media">
+                    <a href="index.html">Главная</a>
+                    <span class="separator">✦</span>
+                    <span>Медиа</span>
+                </div>
+                
+                <h1 class="hero-title-media">
+                    <span class="title-word-media" data-text="МЕДИА">МЕДИА</span>
+                    <span class="title-accent-media">центр клиники</span>
+                </h1>
+                
+                <p class="hero-subtitle-media">
+                    Видеоотзывы наших пациентов, процедуры лечения и жизнь клиники. 
+                    Смотрите реальные истории преображения улыбок.
+                </p>
+                
+                <div class="hero-stats-media">
+                    <div class="stat-media" data-count="50">
+                        <div class="stat-number-media">0+</div>
+                        <div class="stat-label-media">Видеоотзывов</div>
+                    </div>
+                    <div class="stat-media" data-count="1000">
+                        <div class="stat-number-media">0+</div>
+                        <div class="stat-label-media">Просмотров</div>
+                    </div>
+                    <div class="stat-media" data-count="15">
+                        <div class="stat-number-media">0+</div>
+                        <div class="stat-label-media">Процедур показано</div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta-media">
+                    <button class="scroll-to-videos-btn" onclick="MediaPageUtils.scrollToVideos()">
+                        <i class="fa-solid fa-play"></i>
+                        <span>Смотреть видео</span>
+                        <div class="btn-ripple"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Filter Section ─────── -->
+    <section class="media-filter-section">
+        <div class="container">
+            <div class="filter-header-media">
+                <h2>Категории видео</h2>
+                <p>Выберите интересующую вас тему</p>
+            </div>
+            
+            <div class="media-filter-buttons">
+                <button class="media-filter-btn active" data-filter="all">
+                    <i class="fa-solid fa-grid-2"></i>
+                    <span>Все видео</span>
+                </button>
+                <button class="media-filter-btn" data-filter="reviews">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Отзывы</span>
+                </button>
+                <button class="media-filter-btn" data-filter="procedures">
+                    <i class="fa-solid fa-tooth"></i>
+                    <span>Процедуры</span>
+                </button>
+                <button class="media-filter-btn" data-filter="clinic">
+                    <i class="fa-solid fa-building"></i>
+                    <span>О клинике</span>
+                </button>
+                <button class="media-filter-btn" data-filter="education">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Обучение</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Video Gallery ─────── -->
+    <section class="video-gallery-beautiful">
+        <div class="container">
+            <div class="gallery-grid-beautiful">
+
+                <!-- Video 1 -->
+                <div class="video-card-beautiful" data-category="reviews" data-video="https://drive.google.com/file/d/1Nsa1_18SNvM0QuVb0jI3r6FShX9clYnt/preview">
+                    <div class="video-thumbnail-beautiful">
+                        <img src="img/rev1.png" alt="Отзыв пациента 1" loading="lazy">
+                        <div class="video-overlay-beautiful">
+                            <div class="play-button-beautiful">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="video-info-overlay">
+                                <span class="video-category">Отзыв</span>
+                                <span class="video-duration">2:30</span>
+                            </div>
+                        </div>
+                        <div class="video-quality-badge">HD</div>
+                    </div>
+                    <div class="video-content-beautiful">
+                        <h3>Отзыв пациента о лечении</h3>
+                        <p>Реальная история пациента о качественном лечении в нашей клинике</p>
+                        <div class="video-meta-beautiful">
+                            <div class="video-views">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>1.2K просмотров</span>
+                            </div>
+                            <div class="video-date">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>2 дня назад</span>
+                            </div>
+                        </div>
+                        <div class="video-tags-beautiful">
+                            <span class="tag-beautiful primary">Отзыв</span>
+                            <span class="tag-beautiful">Лечение</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card-beautiful featured" data-category="reviews" data-video="https://drive.google.com/file/d/1aC5whYDvxWCa4H-_-lDnsA8Q6xTQRQFL/preview">
+                    <div class="video-thumbnail-beautiful">
+                        <img src="img/rev2.png" alt="Отзыв пациента 2" loading="lazy">
+                        <div class="video-overlay-beautiful">
+                            <div class="play-button-beautiful">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="video-info-overlay">
+                                <span class="video-category">Отзыв</span>
+                                <span class="video-duration">3:15</span>
+                            </div>
+                        </div>
+                        <div class="video-quality-badge">4K</div>
+                        <div class="featured-badge">Популярное</div>
+                    </div>
+                    <div class="video-content-beautiful">
+                        <h3>Успешная имплантация зубов</h3>
+                        <p>Пациент рассказывает о процедуре имплантации и результатах лечения</p>
+                        <div class="video-meta-beautiful">
+                            <div class="video-views">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>3.5K просмотров</span>
+                            </div>
+                            <div class="video-date">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>1 неделю назад</span>
+                            </div>
+                        </div>
+                        <div class="video-tags-beautiful">
+                            <span class="tag-beautiful primary">Имплантация</span>
+                            <span class="tag-beautiful">Отзыв</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-card-beautiful" data-category="procedures" data-video="https://drive.google.com/file/d/1idCXtQpEUguPApZsbq5KDtFAYPf9L5Ko/preview">
+                    <div class="video-thumbnail-beautiful">
+                        <img src="img/rev3.png" alt="Процедура лечения" loading="lazy">
+                        <div class="video-overlay-beautiful">
+                            <div class="play-button-beautiful">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="video-info-overlay">
+                                <span class="video-category">Процедура</span>
+                                <span class="video-duration">4:20</span>
+                            </div>
+                        </div>
+                        <div class="video-quality-badge">HD</div>
+                    </div>
+                    <div class="video-content-beautiful">
+                        <h3>Процедура установки виниров</h3>
+                        <p>Подробный процесс установки керамических виниров для идеальной улыбки</p>
+                        <div class="video-meta-beautiful">
+                            <div class="video-views">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>2.1K просмотров</span>
+                            </div>
+                            <div class="video-date">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>3 дня назад</span>
+                            </div>
+                        </div>
+                        <div class="video-tags-beautiful">
+                            <span class="tag-beautiful primary">Виниры</span>
+                            <span class="tag-beautiful">Процедура</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="video-card-beautiful" data-category="clinic" data-video="https://drive.google.com/file/d/1oyWSZIsxWB5AeIT3FxLm5AM7Vkf_5A-u/preview">
+                    <div class="video-thumbnail-beautiful">
+                        <img src="img/rev4.png" alt="О клинике" loading="lazy">
+                        <div class="video-overlay-beautiful">
+                            <div class="play-button-beautiful">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="video-info-overlay">
+                                <span class="video-category">О клинике</span>
+                                <span class="video-duration">1:45</span>
+                            </div>
+                        </div>
+                        <div class="video-quality-badge">HD</div>
+                    </div>
+                    <div class="video-content-beautiful">
+                        <h3>Экскурсия по клинике</h3>
+                        <p>Знакомство с современным оборудованием и комфортными условиями</p>
+                        <div class="video-meta-beautiful">
+                            <div class="video-views">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>890 просмотров</span>
+                            </div>
+                            <div class="video-date">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>5 дней назад</span>
+                            </div>
+                        </div>
+                        <div class="video-tags-beautiful">
+                            <span class="tag-beautiful primary">Клиника</span>
+                            <span class="tag-beautiful">Оборудование</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="video-card-beautiful" data-category="education" data-video="https://drive.google.com/file/d/1dZslcfOlWikXgIENDPGkR56iXiIGy65_/preview">
+                    <div class="video-thumbnail-beautiful">
+                        <img src="img/rev5.png" alt="Обучающее видео" loading="lazy">
+                        <div class="video-overlay-beautiful">
+                            <div class="play-button-beautiful">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="video-info-overlay">
+                                <span class="video-category">Обучение</span>
+                                <span class="video-duration">3:50</span>
+                            </div>
+                        </div>
+                        <div class="video-quality-badge">HD</div>
+                    </div>
+                    <div class="video-content-beautiful">
+                        <h3>Правильная гигиена полости рта</h3>
+                        <p>Советы от наших специалистов по уходу за зубами и деснами</p>
+                        <div class="video-meta-beautiful">
+                            <div class="video-views">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>1.8K просмотров</span>
+                            </div>
+                            <div class="video-date">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>1 неделю назад</span>
+                            </div>
+                        </div>
+                        <div class="video-tags-beautiful">
+                            <span class="tag-beautiful primary">Гигиена</span>
+                            <span class="tag-beautiful">Советы</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 6 -->
+                <div class="video-card-beautiful" data-category="reviews" data-video="https://drive.google.com/file/d/1jOOn-sWv4UvjvO7yQpfQCMzY_LnCr1d4/preview">
+                    <div class="video-thumbnail-beautiful">
+                        <img src="img/rev6.png" alt="Отзыв пациента 6" loading="lazy">
+                        <div class="video-overlay-beautiful">
+                            <div class="play-button-beautiful">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="video-info-overlay">
+                                <span class="video-category">Отзыв</span>
+                                <span class="video-duration">2:10</span>
+                            </div>
+                        </div>
+                        <div class="video-quality-badge">HD</div>
+                    </div>
+                    <div class="video-content-beautiful">
+                        <h3>Отзыв о брекет-системе</h3>
+                        <p>Пациент делится опытом ортодонтического лечения в нашей клинике</p>
+                        <div class="video-meta-beautiful">
+                            <div class="video-views">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>1.5K просмотров</span>
+                            </div>
+                            <div class="video-date">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>4 дня назад</span>
+                            </div>
+                        </div>
+                        <div class="video-tags-beautiful">
+                            <span class="tag-beautiful primary">Брекеты</span>
+                            <span class="tag-beautiful">Ортодонтия</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="load-more-media">
+                <button class="load-more-btn-media">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Загрузить еще видео</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Video Statistics ─────── -->
+    <section class="video-stats-beautiful">
+        <div class="container">
+            <div class="stats-header-beautiful">
+                <h2>Наша медиа активность</h2>
+                <p>Цифры, которые говорят о нашей открытости и прозрачности</p>
+            </div>
+            
+            <div class="stats-grid-beautiful">
+                <div class="stat-card-beautiful">
+                    <div class="stat-icon-beautiful">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <div class="stat-content-beautiful">
+                        <div class="stat-number-big" data-count="50">0+</div>
+                        <div class="stat-label-big">Видеоотзывов</div>
+                        <div class="stat-description">От довольных пациентов</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card-beautiful">
+                    <div class="stat-icon-beautiful">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="stat-content-beautiful">
+                        <div class="stat-number-big" data-count="15000">0+</div>
+                        <div class="stat-label-big">Просмотров</div>
+                        <div class="stat-description">Общее количество</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card-beautiful">
+                    <div class="stat-icon-beautiful">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="stat-content-beautiful">
+                        <div class="stat-number-big" data-count="98">0%</div>
+                        <div class="stat-label-big">Положительных</div>
+                        <div class="stat-description">Отзывов и оценок</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card-beautiful">
+                    <div class="stat-icon-beautiful">
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <div class="stat-content-beautiful">
+                        <div class="stat-number-big" data-count="2">0+</div>
+                        <div class="stat-label-big">Года</div>
+                        <div class="stat-description">Ведем видеоблог</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Video Modal ─────── -->
+    <div class="video-modal-beautiful" id="videoModal">
+        <div class="modal-overlay-beautiful"></div>
+        <div class="modal-content-beautiful">
+            <div class="modal-header-beautiful">
+                <h3 id="modalTitle">Видео</h3>
+                <button class="close-button-beautiful" id="closeModal">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body-beautiful">
+                <div class="video-container-beautiful">
+                    <iframe id="modalIframe" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            allow="autoplay; encrypted-media" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-controls-beautiful">
+                    <button class="control-btn-beautiful" id="prevVideo">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <span>Предыдущее</span>
+                    </button>
+                    <button class="control-btn-beautiful" id="nextVideo">
+                        <span>Следующее</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────── CTA Section ─────── -->
+    <section class="media-cta-beautiful">
+        <div class="cta-background-media">
+            <div class="cta-shapes-media">
+                <div class="cta-shape-media cta-shape-media-1"></div>
+                <div class="cta-shape-media cta-shape-media-2"></div>
+                <div class="cta-shape-media cta-shape-media-3"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="cta-content-media">
+                <div class="cta-text-media">
+                    <h2>Хотите поделиться своим опытом?</h2>
+                    <p>Запишите видеоотзыв о лечении в нашей клинике и помогите другим пациентам сделать правильный выбор</p>
+                    
+                    <div class="cta-benefits-media">
+                        <div class="benefit-media">
+                            <div class="benefit-icon-media">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <span>Скидка 10% на следующее лечение</span>
+                        </div>
+                        <div class="benefit-media">
+                            <div class="benefit-icon-media">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <span>Профессиональная съемка</span>
+                        </div>
+                        <div class="benefit-media">
+                            <div class="benefit-icon-media">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span>Ваш отзыв поможет другим</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-action-media">
+                    <a href="kontakty.html" class="cta-btn-media">
+                        <i class="fa-solid fa-video"></i>
+                        <span>Записать отзыв</span>
+                        <div class="btn-glow-media"></div>
+                    </a>
+                    <div class="cta-contact-media">
+                        <span>Или позвоните:</span>
+                        <a href="tel:+77054026181">+7 705 402 61 81</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Footer ─────── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <a href="index.html">Nelly dental clinic</a>
+                    </div>
+                    <p>Стоматология 5 звезд</p>
+                    <p>Улы Дала, 35, Город Астана</p>
+                    <p>Пн-Пт 10:00-19:00  Сб, Вс 10:00-16:00</p>
+                    <p>+7 705 402 61 81</p>
+                </div>
+
+                <div class="footer-nav">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="ceny.html">Цены</a></li>
+                        <li><a href="keysy.html">Кейсы</a></li>
+                        <li><a href="vrachi.html">Врачи</a></li>
+                        <li><a href="kontakty.html">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/77054026181" class="social-link">WhatsApp</a>
+                        <a href="https://www.instagram.com/nelly_dental/" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Nelly dental clinic. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ─────── JS ─────── -->
+    <script src="js/script.js"></script>
+</body>
+</html>
