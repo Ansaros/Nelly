@@ -1,6 +1,6 @@
 // ===== КОНФИГУРАЦИЯ GOOGLE SHEETS =====
 const GOOGLE_SHEETS_CONFIG = {
-  API_KEY: "AIzaSyDgsAgBjpO7smUWNoP1AqJy8iwHWEaUUus",
+  API_KEY: "AIzaSyBhprBTBVWE8wsZ5kcHBj6vuUlE5olHQ_g",
   SPREADSHEET_ID: "1XtQEQpQGs_pbvTng58Mn-kND-hDkLudaai0fSF5u-jM",
   RANGE: "Sheet1!A:B",
   CACHE_DURATION: 5 * 60 * 1000, // 5 минут кеширования
