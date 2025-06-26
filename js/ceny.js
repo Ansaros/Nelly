@@ -488,3 +488,39 @@ window.addEventListener("error", (event) => {
 
 // ===== ЭКСПОРТ ДЛЯ ГЛОБАЛЬНОГО ИСПОЛЬЗОВАНИЯ =====
 window.PricesPageUtils = PricesPageUtils
+
+// ===== ФУНКЦИЯ ДЛЯ РАСКРЫТИЯ ДЕТАЛЕЙ УСЛУГ =====
+function toggleServiceDetails(element) {
+  try {
+    const serviceItem = element.closest(".service-item")
+    const isExpanded = serviceItem.classList.contains("expanded")
+
+    // Закрываем все открытые карточки в текущей секции
+    const currentSection = serviceItem.closest(".service-content")
+    const allItems = currentSection.querySelectorAll(".service-item")
+
+    allItems.forEach((item) => {
+      item.classList.remove("expanded")
+    })
+
+    // Если карточка не была раскрыта, раскрываем её
+    if (!isExpanded) {
+      serviceItem.classList.add("expanded")
+
+      // Плавная прокрутка к карточке
+      setTimeout(() => {
+        serviceItem.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        })
+      }, 100)
+    }
+
+    console.log("Переключение деталей услуги:", serviceItem.querySelector("h3").textContent)
+  } catch (error) {
+    console.error("Ошибка переключения деталей услуги:", error)
+  }
+}
+
+// Добавляем функцию в глобальную область видимости
+window.toggleServiceDetails = toggleServiceDetails
