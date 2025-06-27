@@ -158,7 +158,7 @@
                     <div class="hero-features-prices">
                         <div class="feature-prices">
                             <div class="feature-icon-prices">
-                                <i class="fa-solid fa-shield-check"></i>
+                                <i class="fa-solid fa-money-bill"></i>
                             </div>
                             <div class="feature-content-prices">
                                 <h4>Фиксированные цены</h4>
@@ -209,7 +209,6 @@
                             </div>
                             <div class="price-card-price">
                                 <span class="price-value" data-service-key="Первичная консультация">5 000</span>
-                                <span class="price-currency">₸</span>
                             </div>
                             <div class="price-card-features">
                                 <div class="feature-item">✓ Полный осмотр</div>
@@ -302,6 +301,7 @@
                                     <h3>Онлайн консультация</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="консультация без оплаты">от 3 000</span>
+                                        <span class="price-currency">₸</span>
                                     </div>
                                 </div>
                             </div>
@@ -356,7 +356,6 @@
                                     <h3>Полный чек-ап консультация</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="Первичная консультация">5 000</span>
-                                        <span class="price-currency">₸</span>
                                     </div>
                                 </div>
                             </div>
@@ -385,57 +384,11 @@
                                 
                                 <div class="service-note">
                                     <i class="fa-solid fa-info-circle"></i>
-                                    <span>Снимки пациент оплачивает отдельно. Консультация ортодонта бесплатная.</span>
+                                    <span>Консультация будет бесплатной, за исключением ортодонта.</span>
                                 </div>
                                 
                                 <div class="service-actions">
                                     <button class="book-service-btn" data-service="Полный чек-ап консультация">
-                                        <i class="fa-solid fa-calendar-plus"></i>
-                                        <span>Записаться</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- НР консультация -->
-                    <div class="service-item">
-                        <div class="service-main" onclick="toggleServiceDetails(this)">
-                            <div class="service-info">
-                                <div class="service-icon">
-                                    <i class="fa-solid fa-user-md"></i>
-                                </div>
-                                <div class="service-content-main">
-                                    <h3>Консультация НР</h3>
-                                    <div class="service-price">
-                                        <span class="price-value" data-service-key="консультация НР">10 000</span>
-                                        <span class="price-currency">₸</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="expand-icon">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="service-details">
-                            <div class="details-content">
-                                <div class="service-time">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <span>45-60 минут</span>
-                                </div>
-                                
-                                <div class="service-includes">
-                                    <h4>Что входит:</h4>
-                                    <ul>
-                                        <li>Специализированная консультация</li>
-                                        <li>Детальный анализ состояния</li>
-                                        <li>Рекомендации по лечению</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Консультация НР">
                                         <i class="fa-solid fa-calendar-plus"></i>
                                         <span>Записаться</span>
                                     </button>
@@ -462,10 +415,11 @@
                                     <i class="fa-solid fa-sparkles"></i>
                                 </div>
                                 <div class="service-content-main">
-                                    <h3>Курс гигиены и ухода за зубами</h3>
+                                    <h3>Проф. гигиена (полная, частичная или ортодонтическая)</h3>
                                     <div class="service-price">
-                                        <span class="price-value" data-service-key="Курс гигиены и ухода за зубами">от 8 000</span>
+                                        <span class="price-value" data-service-key="Курс гигиены и ухода за зубами">2-</span>
                                         <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -511,7 +465,6 @@
                                     <h3>Профгигиена ортодонтическая</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="Проф.гигиена ортодонтическая">25 000</span>
-                                        <span class="price-currency">₸</span>
                                     </div>
                                 </div>
                             </div>
@@ -557,7 +510,6 @@
                                     <h3>Отбеливание системой Beyond</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="отбеливание системой Beyond">80 000</span>
-                                        <span class="price-currency">₸</span>
                                     </div>
                                 </div>
                             </div>
@@ -603,7 +555,6 @@
                                     <h3>Домашнее отбеливание</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="Домашнее отбеливание гель">17 000</span>
-                                        <span class="price-currency">₸</span>
                                     </div>
                                 </div>
                             </div>
@@ -621,6 +572,10 @@
                                         <li>1 тюбик отбеливающего геля</li>
                                     </ul>
                                 </div>
+                                <div class="service-note" style="text-align: left;">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span>Является дополнительным отбеливанием к системе Beyond (для улучшения результата)<br>Пациент проводит процедуру дома<br>Используется гель не выше 20% перекись карбамида</span>
+                                </div>
                                 
                                 <div class="service-actions">
                                     <button class="book-service-btn" data-service="Домашнее отбеливание">
@@ -631,7 +586,103 @@
                             </div>
                         </div>
                     </div>
+                     <!-- Работа с дисколоритами -->
+                    <div class="service-item">
+                        <div class="service-main" onclick="toggleServiceDetails(this)">
+                            <div class="service-info">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-home"></i>
+                                </div>
+                                <div class="service-content-main">
+                                    <h3>Работа с дисколоритами (белыми и коричневыми пятнами в области улыбки)</h3>
+                                    <div class="service-price">
+                                        <span class="price-value" data-service-key="">20 000₸</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expand-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-details">
+                            <div class="details-content">
+                                <div class="service-time">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>60 минут</span>
+                                </div>
+                                <div class="service-note" style="text-align: left;">
+                                    <span>Количество посещений зависит от количества зубов и состояния потемневших участков (дисколоритов).</span>
+                                </div>
+                                <div class="service-note" style="text-align: left;">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span>Точный план лечения составляется только после консультации врача.</span>
+                                </div>
+                                
+                                <div class="service-actions">
+                                    <button class="book-service-btn" data-service="">
+                                        <i class="fa-solid fa-calendar-plus"></i>
+                                        <span>Записаться</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    
+
+                    <!-- Осветление White Smile -->
+                    <div class="service-item">
+                        <div class="service-main" onclick="toggleServiceDetails(this)">
+                            <div class="service-info">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-sun"></i>
+                                </div>
+                                <div class="service-content-main">
+                                    <h3>Эстетическое осветление</h3>
+                                    <div class="service-price">
+                                        <span class="price-value" data-service-key="Осветление white smile">25 000</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="expand-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-details">
+                            <div class="details-content">
+                                <div class="service-time">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>60-90 минут</span>
+                                </div>
+                                <div class="service-includes">
+                                    <h4>Описание:</h4>
+                                    <ul>
+                                        <li>Щадящее осветление гелем 4% карбамида White Smile (Франция)</li>
+                                        <li>На лампе холодного света</li>
+                                        <li>Улыбка становится ярче и светлее на 1-2 тона</li>
+                                    </ul>
+                                </div>
+
+                                <div class="service-note">
+                                    <span>Подходит тем кто боится радикальных решений,но при этом хотят улучшить свою улыбку.<br>При проведении с профессиональной гигиеной есть спец предложения (уточняйте у администратора)</span>
+                                </div>
+                                 <div class="service-note">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span>Обязательно нужна консультация.</span>
+                                </div>
+                                
+                                <div class="service-actions">
+                                    <button class="book-service-btn" data-service="Осветление White Smile">
+                                        <i class="fa-solid fa-calendar-plus"></i>
+                                        <span>Записаться</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Внутрикоронковое отбеливание -->
                     <div class="service-item">
                         <div class="service-main" onclick="toggleServiceDetails(this)">
@@ -643,7 +694,6 @@
                                     <h3>Внутрикоронковое отбеливание</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="внутрикоронковое отбеливание">29 000</span>
-                                        <span class="price-currency">₸</span>
                                     </div>
                                 </div>
                             </div>
@@ -654,12 +704,19 @@
                         
                         <div class="service-details">
                             <div class="details-content">
+                                 <div class="service-time">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>60 минут</span>
+                                </div>
                                 <div class="service-includes">
                                     <h4>Описание:</h4>
                                     <ul>
                                         <li>Отбеливание ранее депульпированных зубов</li>
-                                        <li>Внутрикоронковое отбеливание</li>
                                     </ul>
+                                </div>
+                                <div class="service-note">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span>Обязательно нужна консультация.</span>
                                 </div>
                                 
                                 <div class="service-actions">
@@ -671,19 +728,18 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Осветление White Smile -->
+                    <!-- Обучение гигиене -->
                     <div class="service-item">
                         <div class="service-main" onclick="toggleServiceDetails(this)">
                             <div class="service-info">
                                 <div class="service-icon">
-                                    <i class="fa-solid fa-sun"></i>
+                                    <i class="fa-solid fa-tooth"></i>
                                 </div>
                                 <div class="service-content-main">
-                                    <h3>Осветление White Smile</h3>
+                                    <h3>Обучение гигиене полости рта с подбором индивидуальных средств гигиены</h3>
                                     <div class="service-price">
-                                        <span class="price-value" data-service-key="Осветление white smile">25 000</span>
-                                        <span class="price-currency">₸</span>
+                                        <span class="price-value" data-service-key="Курс гигиены и ухода за зубами"> от 8 000</span>
+                                    <span class="price-currency">₸</span>
                                     </div>
                                 </div>
                             </div>
@@ -694,17 +750,17 @@
                         
                         <div class="service-details">
                             <div class="details-content">
-                                <div class="service-includes">
-                                    <h4>Описание:</h4>
-                                    <ul>
-                                        <li>Щадящее осветление гелем 4% карбамида White Smile (Франция)</li>
-                                        <li>На лампе холодного света</li>
-                                        <li>Улыбка становится ярче на 1-2 тона</li>
-                                    </ul>
+                                 <div class="service-time">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>60 минут</span>
+                                </div>
+                                <div class="service-note">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span>Средства идут за отдельную стоимость (зависит от бренда).</span>
                                 </div>
                                 
                                 <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Осветление White Smile">
+                                    <button class="book-service-btn" data-service="Внутрикоронковое отбеливание">
                                         <i class="fa-solid fa-calendar-plus"></i>
                                         <span>Записаться</span>
                                     </button>
@@ -734,7 +790,7 @@
                                     <h3>Лечение поверхностного кариеса</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="реставрация поверхностный кариес">28 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -758,7 +814,13 @@
                                         <li>Гарантия 2 года</li>
                                     </ul>
                                 </div>
-                                
+                                     <div class="service-note">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span> Продолжительность процедуры зависит от количества обрабатываемых зубов.
+В среднем работа занимает от 1,5 до 2 часов.
+При подготовке более трёх зубов время увеличивается и может составлять свыше 2 часов.<br>При лечении двух и более зубов действуют специальные предложения.
+Уточняйте подробности у администратора клиники.</span>
+                                </div>
                                 <div class="service-actions">
                                     <button class="book-service-btn" data-service="Лечение поверхностного кариеса">
                                         <i class="fa-solid fa-calendar-plus"></i>
@@ -780,7 +842,7 @@
                                     <h3>Лечение среднего кариеса</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="реставрация средний кариес">31 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -793,20 +855,26 @@
                             <div class="details-content">
                                 <div class="service-time">
                                     <i class="fa-solid fa-clock"></i>
-                                    <span>90-120 минут</span>
+                                    <span>60-90 минут</span>
                                 </div>
                                 
                                 <div class="service-includes">
                                     <h4>Описание:</h4>
                                     <ul>
-                                        <li>Средняя кариозная полость</li>
                                         <li>Поражение дентина</li>
+                                        <li>Средняя кариозная полость</li>
                                         <li>Гарантия 2 года</li>
                                     </ul>
                                 </div>
-                                
+                                     <div class="service-note">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span> Продолжительность процедуры зависит от количества обрабатываемых зубов.
+В среднем работа занимает от 1,5 до 2 часов.
+При подготовке более трёх зубов время увеличивается и может составлять свыше 2 часов.<br>При лечении двух и более зубов действуют специальные предложения.
+Уточняйте подробности у администратора клиники.</span>
+                                </div>
                                 <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Лечение среднего кариеса">
+                                    <button class="book-service-btn" data-service="реставрация средний кариес">
                                         <i class="fa-solid fa-calendar-plus"></i>
                                         <span>Записаться</span>
                                     </button>
@@ -826,7 +894,7 @@
                                     <h3>Лечение глубокого кариеса</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="лечение глубокого кариеса">39 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -839,20 +907,26 @@
                             <div class="details-content">
                                 <div class="service-time">
                                     <i class="fa-solid fa-clock"></i>
-                                    <span>120-150 минут</span>
+                                    <span>60-90 минут</span>
                                 </div>
                                 
                                 <div class="service-includes">
                                     <h4>Описание:</h4>
                                     <ul>
-                                        <li>Глубокая кариозная полость</li>
                                         <li>Близко к пульпе</li>
+                                        <li>Глубокая кариозная полость</li>
                                         <li>Гарантия 2 года</li>
                                     </ul>
                                 </div>
-                                
+                                     <div class="service-note">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span> Продолжительность процедуры зависит от количества обрабатываемых зубов.
+В среднем работа занимает от 1,5 до 2 часов.
+При подготовке более трёх зубов время увеличивается и может составлять свыше 2 часов.<br>При лечении двух и более зубов действуют специальные предложения.
+Уточняйте подробности у администратора клиники.</span>
+                                </div>
                                 <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Лечение глубокого кариеса">
+                                    <button class="book-service-btn" data-service="лечение глубокого кариеса">
                                         <i class="fa-solid fa-calendar-plus"></i>
                                         <span>Записаться</span>
                                     </button>
@@ -872,7 +946,7 @@
                                     <h3>Реставрация фронтального зуба</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="реставрация фронт.зубов">45 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -896,6 +970,13 @@
                                         <li>Гарантия 2 года</li>
                                     </ul>
                                 </div>
+                                <div class="service-note">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span> Продолжительность процедуры зависит от количества обрабатываемых зубов.
+В среднем работа занимает от 1,5 до 2 часов.
+При подготовке более трёх зубов время увеличивается и может составлять свыше 2 часов.<br>При лечении двух и более зубов действуют специальные предложения.
+Уточняйте подробности у администратора клиники.</span>
+                                </div>
                                 
                                 <div class="service-actions">
                                     <button class="book-service-btn" data-service="Реставрация фронтального зуба">
@@ -918,7 +999,7 @@
                                     <h3>Билдап под ортопедическую конструкцию</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="билдап под ортопед конструкцию">33 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -964,7 +1045,7 @@
                                     <h3>Реставрация всей коронки</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="реставрация всей коронки">46 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1009,18 +1090,26 @@
                 </div>
                 
                 <div class="services-list">
-                    <!-- Лечение пульпита 1 канал -->
+                    <!-- Первичное эндо -->
                     <div class="service-item">
                         <div class="service-main" onclick="toggleServiceDetails(this)">
                             <div class="service-info">
                                 <div class="service-icon">
-                                    <i class="fa-solid fa-microscope"></i>
+                                    <i class="fa-solid fa-tooth"></i>
                                 </div>
                                 <div class="service-content-main">
-                                    <h3>Лечение пульпита (1 канал)</h3>
+                                    <h3>Первичное эндо</h3>
                                     <div class="service-price">
-                                        <span class="price-value" data-service-key="лечение пульпита 1 канального зуба">23 500</span>
-                                        <span class="price-currency">₸</span>
+                                        <span>1 канальный - </span>
+                                        <span class="price-smaller" data-service-key="">95 100₸</span>
+                                    </div>
+                                    <div class="service-price">
+                                        <span>2 канальный - </span>
+                                        <span class="price-smaller" data-service-key="">108 400₸</span>
+                                    </div>
+                                    <div class="service-price">
+                                        <span>3 канальный - </span>
+                                        <span class="price-smaller" data-service-key="">122 000₸</span>
                                     </div>
                                 </div>
                             </div>
@@ -1033,20 +1122,23 @@
                             <div class="details-content">
                                 <div class="service-time">
                                     <i class="fa-solid fa-clock"></i>
-                                    <span>90-120 минут</span>
+                                    <span>120 минут</span>
                                 </div>
                                 
                                 <div class="service-includes">
-                                    <h4>Описание:</h4>
+                                    <h4>В стоимость входит:</h4>
                                     <ul>
-                                        <li>Лечение воспаления пульпы</li>
-                                        <li>Обработка 1 корневого канала</li>
-                                        <li>Пломбирование канала</li>
+                                        <li>Работа в корневых каналах (временная и постоянная)</li>
+                                        <li>Рентгенологические снимки</li>
+                                        <li>Временная и постоянная реставрация зуба</li>
                                     </ul>
                                 </div>
-                                
+                                <div class="service-note">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span>Проводится в 2 посещения.</span>
+                                </div>
                                 <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Лечение пульпита (1 канал)">
+                                    <button class="book-service-btn" data-service="">
                                         <i class="fa-solid fa-calendar-plus"></i>
                                         <span>Записаться</span>
                                     </button>
@@ -1054,19 +1146,26 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Лечение пульпита 2 канала -->
+                    <!-- Повторное эндо -->
                     <div class="service-item">
                         <div class="service-main" onclick="toggleServiceDetails(this)">
                             <div class="service-info">
                                 <div class="service-icon">
-                                    <i class="fa-solid fa-microscope"></i>
+                                    <i class="fa-solid fa-tooth"></i>
                                 </div>
                                 <div class="service-content-main">
-                                    <h3>Лечение пульпита (2 канала)</h3>
+                                    <h3>Повторное эндо</h3>
                                     <div class="service-price">
-                                        <span class="price-value" data-service-key="лечение пульпита 2 канального">27 600</span>
-                                        <span class="price-currency">₸</span>
+                                        <span>1 канальный - </span>
+                                        <span class="price-smaller" data-service-key=""></span>
+                                    </div>
+                                    <div class="service-price">
+                                        <span>2 канальный - </span>
+                                        <span class="price-smaller" data-service-key="">120 800₸</span>
+                                    </div>
+                                    <div class="service-price">
+                                        <span>3 канальный - </span>
+                                        <span class="price-smaller" data-service-key=""></span>
                                     </div>
                                 </div>
                             </div>
@@ -1079,204 +1178,26 @@
                             <div class="details-content">
                                 <div class="service-time">
                                     <i class="fa-solid fa-clock"></i>
-                                    <span>120-150 минут</span>
+                                    <span>120 минут</span>
                                 </div>
                                 
                                 <div class="service-includes">
-                                    <h4>Описание:</h4>
+                                    <h4>В стоимость входит:</h4>
                                     <ul>
-                                        <li>Лечение воспаления пульпы</li>
-                                        <li>Обработка 2 корневых каналов</li>
-                                        <li>Пломбирование каналов</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Лечение пульпита (2 канала)">
-                                        <i class="fa-solid fa-calendar-plus"></i>
-                                        <span>Записаться</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                        <li>Работа в корневых каналах (временная и постоянная)</li>
+                                        <li>Рентгенологические снимки</li>
+                                        <li>Временная и постоянная реставрация зуба</li>
+                                        <li>Временное и постоянное пломбирование каналов</li>
+                                        <li>Распломбирование</li>
 
-                    <!-- Лечение пульпита 3+ каналов -->
-                    <div class="service-item">
-                        <div class="service-main" onclick="toggleServiceDetails(this)">
-                            <div class="service-info">
-                                <div class="service-icon">
-                                    <i class="fa-solid fa-microscope"></i>
-                                </div>
-                                <div class="service-content-main">
-                                    <h3>Лечение пульпита (3+ каналов)</h3>
-                                    <div class="service-price">
-                                        <span class="price-value" data-service-key="лечение пульпита 3 и более каналов">32 000</span>
-                                        <span class="price-currency">₸</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="expand-icon">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="service-details">
-                            <div class="details-content">
-                                <div class="service-time">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <span>150-180 минут</span>
-                                </div>
-                                
-                                <div class="service-includes">
-                                    <h4>Описание:</h4>
-                                    <ul>
-                                        <li>Лечение воспаления пульпы</li>
-                                        <li>Обработка 3 и более корневых каналов</li>
-                                        <li>Пломбирование каналов</li>
                                     </ul>
                                 </div>
-                                
+                                <div class="service-note">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                    <span>Проводится в 2 посещения.</span>
+                                </div>
                                 <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Лечение пульпита (3+ каналов)">
-                                        <i class="fa-solid fa-calendar-plus"></i>
-                                        <span>Записаться</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Перелечивание периодонтита 1 канал -->
-                    <div class="service-item">
-                        <div class="service-main" onclick="toggleServiceDetails(this)">
-                            <div class="service-info">
-                                <div class="service-icon">
-                                    <i class="fa-solid fa-redo"></i>
-                                </div>
-                                <div class="service-content-main">
-                                    <h3>Перелечивание периодонтита (1 канал)</h3>
-                                    <div class="service-price">
-                                        <span class="price-value" data-service-key="перелечивание периодонтита 1ого зуба">26 000</span>
-                                        <span class="price-currency">₸</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="expand-icon">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="service-details">
-                            <div class="details-content">
-                                <div class="service-time">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <span>120-150 минут</span>
-                                </div>
-                                
-                                <div class="service-includes">
-                                    <h4>Описание:</h4>
-                                    <ul>
-                                        <li>Повторное лечение периодонтита</li>
-                                        <li>Распломбирование канала</li>
-                                        <li>Перелечивание 1 канала</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Перелечивание периодонтита (1 канал)">
-                                        <i class="fa-solid fa-calendar-plus"></i>
-                                        <span>Записаться</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Перелечивание периодонтита 2 канала -->
-                    <div class="service-item">
-                        <div class="service-main" onclick="toggleServiceDetails(this)">
-                            <div class="service-info">
-                                <div class="service-icon">
-                                    <i class="fa-solid fa-redo"></i>
-                                </div>
-                                <div class="service-content-main">
-                                    <h3>Перелечивание периодонтита (2 канала)</h3>
-                                    <div class="service-price">
-                                        <span class="price-value" data-service-key="перелечивание периодонтита 2 ого зуба">32 000</span>
-                                        <span class="price-currency">₸</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="expand-icon">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="service-details">
-                            <div class="details-content">
-                                <div class="service-time">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <span>150-180 минут</span>
-                                </div>
-                                
-                                <div class="service-includes">
-                                    <h4>Описание:</h4>
-                                    <ul>
-                                        <li>Повторное лечение периодонтита</li>
-                                        <li>Распломбирование каналов</li>
-                                        <li>Перелечивание 2 каналов</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Перелечивание периодонтита (2 канала)">
-                                        <i class="fa-solid fa-calendar-plus"></i>
-                                        <span>Записаться</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Перелечивание периодонтита 3+ каналов -->
-                    <div class="service-item">
-                        <div class="service-main" onclick="toggleServiceDetails(this)">
-                            <div class="service-info">
-                                <div class="service-icon">
-                                    <i class="fa-solid fa-redo"></i>
-                                </div>
-                                <div class="service-content-main">
-                                    <h3>Перелечивание периодонтита (3+ каналов)</h3>
-                                    <div class="service-price">
-                                        <span class="price-value" data-service-key="перелечивание периодонтита 3 ого канального и более">39 000</span>
-                                        <span class="price-currency">₸</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="expand-icon">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="service-details">
-                            <div class="details-content">
-                                <div class="service-time">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <span>180-240 минут</span>
-                                </div>
-                                
-                                <div class="service-includes">
-                                    <h4>Описание:</h4>
-                                    <ul>
-                                        <li>Повторное лечение периодонтита</li>
-                                        <li>Распломбирование каналов</li>
-                                        <li>Перелечивание 3 и более каналов</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Перелечивание периодонтита (3+ каналов)">
+                                    <button class="book-service-btn" data-service="">
                                         <i class="fa-solid fa-calendar-plus"></i>
                                         <span>Записаться</span>
                                     </button>
@@ -1285,6 +1206,7 @@
                         </div>
                     </div>
                 </div>
+                    
             </div>
 
             <!-- Протезирование -->
@@ -1295,6 +1217,38 @@
                 </div>
                 
                 <div class="services-list">
+                    <!-- Снятие слепка с 1 челюсти -->
+                    <div class="service-item featured">
+                        <div class="service-main" onclick="toggleServiceDetails(this)">
+                            <div class="service-info">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <div class="service-content-main">
+                                    <h3>Снятие слепка с 1 челюсти</h3>
+                                    <div class="service-price">
+                                        <span class="price-value" data-service-key="Снятие слепков одной челюсти (ортодонтия)">7 000</span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expand-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-details">
+                            <div class="details-content">
+                                <div class="service-actions">
+                                    <button class="book-service-btn" data-service="Снятие слепков одной челюсти (ортодонтия)">
+                                        <i class="fa-solid fa-calendar-plus"></i>
+                                        <span>Записаться</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Циркониевая коронка -->
                     <div class="service-item featured">
                         <div class="service-main" onclick="toggleServiceDetails(this)">
@@ -1303,10 +1257,10 @@
                                     <i class="fa-solid fa-crown"></i>
                                 </div>
                                 <div class="service-content-main">
-                                    <h3>Циркониевая коронка</h3>
+                                    <h3>Циркониевая коронка на свои зубы</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="коронка циркониевая">115 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1345,10 +1299,10 @@
                                     <i class="fa-solid fa-gem"></i>
                                 </div>
                                 <div class="service-content-main">
-                                    <h3>Керамическая коронка EMAX</h3>
+                                    <h3>Керамическая коронка EMAX на свои зубы</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="коронка керамическая ЕМАХ">115 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1379,48 +1333,6 @@
                         </div>
                     </div>
 
-                    <!-- Металлокерамическая коронка -->
-                    <div class="service-item">
-                        <div class="service-main" onclick="toggleServiceDetails(this)">
-                            <div class="service-info">
-                                <div class="service-icon">
-                                    <i class="fa-solid fa-crown"></i>
-                                </div>
-                                <div class="service-content-main">
-                                    <h3>Металлокерамическая коронка</h3>
-                                    <div class="service-price">
-                                        <span class="price-value" data-service-key="Коронка Металлокерамика">55 000</span>
-                                        <span class="price-currency">₸</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="expand-icon">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="service-details">
-                            <div class="details-content">
-                                <div class="service-includes">
-                                    <h4>Описание:</h4>
-                                    <ul>
-                                        <li>Металлический каркас с керамическим покрытием</li>
-                                        <li>Прочность и надежность</li>
-                                        <li>Доступная цена</li>
-                                        <li>Подходит для жевательных зубов</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Металлокерамическая коронка">
-                                        <i class="fa-solid fa-calendar-plus"></i>
-                                        <span>Записаться</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Винир керамический EMAX -->
                     <div class="service-item featured">
                         <div class="service-main" onclick="toggleServiceDetails(this)">
@@ -1432,7 +1344,7 @@
                                     <h3>Винир керамический EMAX</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="винир керамика ЕМАХ">125 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1463,47 +1375,7 @@
                         </div>
                     </div>
 
-                    <!-- Композитный винир -->
-                    <div class="service-item">
-                        <div class="service-main" onclick="toggleServiceDetails(this)">
-                            <div class="service-info">
-                                <div class="service-icon">
-                                    <i class="fa-solid fa-palette"></i>
-                                </div>
-                                <div class="service-content-main">
-                                    <h3>Композитный винир</h3>
-                                    <div class="service-price">
-                                        <span class="price-value" data-service-key="композитный винир">52 000</span>
-                                        <span class="price-currency">₸</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="expand-icon">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="service-details">
-                            <div class="details-content">
-                                <div class="service-includes">
-                                    <h4>Описание:</h4>
-                                    <ul>
-                                        <li>Прямая реставрация композитом</li>
-                                        <li>Выполняется за одно посещение</li>
-                                        <li>Доступная цена</li>
-                                        <li>Хорошая эстетика</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="service-actions">
-                                    <button class="book-service-btn" data-service="Композитный винир">
-                                        <i class="fa-solid fa-calendar-plus"></i>
-                                        <span>Записаться</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  
 
                     <!-- Керамическая вкладка EMAX -->
                     <div class="service-item">
@@ -1513,10 +1385,10 @@
                                     <i class="fa-solid fa-puzzle-piece"></i>
                                 </div>
                                 <div class="service-content-main">
-                                    <h3>Керамическая вкладка EMAX</h3>
+                                    <h3>Керамическая вкладка EMAX на свои зубы</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="вкладка керамическая ЕМАХ">90 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1546,6 +1418,69 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Временная коронка прямой метод -->
+                    <div class="service-item featured">
+                        <div class="service-main" onclick="toggleServiceDetails(this)">
+                            <div class="service-info">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <div class="service-content-main">
+                                    <h3>Временная коронка прямой метод</h3>
+                                    <div class="service-price">
+                                        <span class="price-value" data-service-key="временная коронка прямой метод">10 000</span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expand-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-details">
+                            <div class="details-content">
+                                <div class="service-actions">
+                                    <button class="book-service-btn" data-service="временная коронка прямой метод">
+                                        <i class="fa-solid fa-calendar-plus"></i>
+                                        <span>Записаться</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- Временная коронка cad cam на свои зубы -->
+                    <div class="service-item featured">
+                        <div class="service-main" onclick="toggleServiceDetails(this)">
+                            <div class="service-info">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <div class="service-content-main">
+                                    <h3>Временная коронка cad cam на свои зубы</h3>
+                                    <div class="service-price">
+                                        <span class="price-value" data-service-key="временная пластмассовая коронка cad/cam">30 000</span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expand-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-details">
+                            <div class="details-content">
+                                <div class="service-actions">
+                                    <button class="book-service-btn" data-service="временная пластмассовая коронка cad/cam">
+                                        <i class="fa-solid fa-calendar-plus"></i>
+                                        <span>Записаться</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -1568,7 +1503,7 @@
                                     <h3>Имплантат Straumann</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="Имплантат shtraumn">395 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1610,7 +1545,7 @@
                                     <h3>Имплантат Ankylos (Германия)</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="Ankylos импланты (германия)">320 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1652,7 +1587,7 @@
                                     <h3>Имплантат BioHorizons</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="имплантат Biohorizont">260 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1694,7 +1629,7 @@
                                     <h3>Синус-лифтинг</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="синус лифтинг">300 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1736,7 +1671,7 @@
                                     <h3>Удаление зуба простое</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="удаление зуба простое (без анестезии)">23 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1783,7 +1718,7 @@
                                     <h3>Удаление зуба мудрости</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="удаление третьих моляров(зуб мудрости )">34 500</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1840,7 +1775,7 @@
                                     <h3>Брекеты Damon Q (США)</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="Установка металлических самолигирующих брекетов Damon Q США (на одну челюсть)">400 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1887,7 +1822,7 @@
                                     <h3>Металлические брекеты Biomom</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="Установка металлических брекетов, обычные, лигатурные Biomom (на одну челюсть)">170 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1981,7 +1916,7 @@
                                     <h3>Ретенционная капа</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="Каппа ретанционная">30 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -2023,7 +1958,7 @@
                                     <h3>Ортодонтическая диагностика</h3>
                                     <div class="service-price">
                                         <span class="price-value" data-service-key="Диагностика (фотопротокол, изготовление гипсовых моделей, анализ 3Д и расчет ТРГ)">20 000</span>
-                                        <span class="price-currency">₸</span>
+                                        
                                     </div>
                                 </div>
                             </div>
