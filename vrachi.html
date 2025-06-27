@@ -11,8 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
-    <!-- Основные стили проекта -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/doctors-styles.css">
 </head>
 <body>
     <!-- ─────── Top Bar ─────── -->
@@ -146,15 +145,15 @@
                     
                     <div class="hero-stats-doctors">
                         <div class="stat-doctors" data-count="6">
-                            <div class="stat-number-doctors">0+</div>
+                            <div class="stat-number-doctors" id="doctorsCount">0+</div>
                             <div class="stat-label-doctors">Специалистов</div>
                         </div>
                         <div class="stat-doctors" data-count="14">
-                            <div class="stat-number-doctors">0</div>
+                            <div class="stat-number-doctors">14</div>
                             <div class="stat-label-doctors">Лет опыта</div>
                         </div>
                         <div class="stat-doctors" data-count="98">
-                            <div class="stat-number-doctors">0%</div>
+                            <div class="stat-number-doctors">98%</div>
                             <div class="stat-label-doctors">Довольных пациентов</div>
                         </div>
                     </div>
@@ -217,6 +216,18 @@
         </div>
     </section>
 
+    <!-- ─────── Data Status Section ─────── -->
+    <section class="doctors-status-section">
+        <div class="container">
+            <div class="data-status-doctors">
+                <div id="doctorsDataStatus" class="status-loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Загрузка информации о врачах...
+                </div>
+                <div id="doctorsLastUpdate" class="last-update"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- ─────── Filter Section ─────── -->
     <section class="doctors-filter-section">
         <div class="container">
@@ -225,26 +236,11 @@
                 <p>Выберите специализацию для поиска нужного врача</p>
             </div>
             
-            <div class="doctors-filter-buttons">
+            <div class="doctors-filter-buttons" id="doctorsFilterButtons">
                 <button class="doctors-filter-btn active" data-filter="all">
                     <i class="fa-solid fa-users"></i>
                     <span>Все врачи</span>
-                    <div class="filter-count">6</div>
-                </button>
-                <button class="doctors-filter-btn" data-filter="therapist">
-                    <i class="fa-solid fa-tooth"></i>
-                    <span>Терапевты</span>
-                    <div class="filter-count">4</div>
-                </button>
-                <button class="doctors-filter-btn" data-filter="orthodontist">
-                    <i class="fa-solid fa-grip-lines"></i>
-                    <span>Ортодонты</span>
-                    <div class="filter-count">1</div>
-                </button>
-                <button class="doctors-filter-btn" data-filter="endodontist">
-                    <i class="fa-solid fa-microscope"></i>
-                    <span>Эндодонтисты</span>
-                    <div class="filter-count">1</div>
+                    <div class="filter-count" id="allDoctorsCount">0</div>
                 </button>
             </div>
         </div>
@@ -253,548 +249,13 @@
     <!-- ─────── Doctors Grid ─────── -->
     <section class="doctors-grid-beautiful">
         <div class="container">
-            <div class="doctors-list-beautiful">
-
-                <!-- Doctor 1 - Нелли -->
-                <div class="doctor-card-beautiful featured" data-specialization="therapist">
-                    <div class="doctor-image-beautiful">
-                        <img src="img/nellyvrach.JPG" alt="Нелли Курмаева Ринатовна" loading="lazy">
-                        <div class="doctor-overlay-beautiful">
-                            <div class="overlay-content-doctors">
-                                <button class="view-doctor-btn" data-doctor="nelly">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>Подробнее</span>
-                                </button>
-                                <button class="book-doctor-btn" data-doctor="nelly">
-                                    <i class="fa-solid fa-calendar-plus"></i>
-                                    <span>Записаться</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="doctor-badge">Главный врач</div>
-                        <div class="experience-badge">14 лет</div>
+            <div class="doctors-list-beautiful" id="doctorsList">
+                <!-- Карточки врачей будут загружены динамически -->
+                <div class="loading-doctors">
+                    <div class="loading-spinner">
+                        <i class="fa-solid fa-spinner fa-spin"></i>
                     </div>
-                    
-                    <div class="doctor-content-beautiful">
-                        <div class="doctor-header-beautiful">
-                            <h3>Курмаева Нелли Ринатовна</h3>
-                            <div class="doctor-rating">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <span class="rating-text">5.0</span>
-                            </div>
-                        </div>
-                        
-                        <p class="doctor-position-beautiful">Стоматолог-терапевт</p>
-                        
-                        <div class="doctor-specialties">
-                            <span class="specialty-tag primary">Терапия</span>
-                            <span class="specialty-tag">Эстетика</span>
-                            <span class="specialty-tag">Эндодонтия</span>
-                        </div>
-                        
-                        <p class="doctor-description-beautiful">
-                            Специализируется на лечении кариеса, пульпита и периодонтита, 
-                            прямых эстетических реставрациях и координации работы команды.
-                        </p>
-                        
-                        <div class="doctor-stats-beautiful">
-                            <div class="stat-item">
-                                <i class="fa-solid fa-calendar-check"></i>
-                                <span>14 лет стажа</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fa-solid fa-users"></i>
-                                <span>500+ пациентов</span>
-                            </div>
-                        </div>
-                        
-                        <div class="doctor-actions-beautiful">
-                            <button class="primary-btn-doctors" data-doctor="nelly">
-                                <i class="fa-solid fa-calendar-plus"></i>
-                                <span>Записаться на прием</span>
-                            </button>
-                            <button class="secondary-btn-doctors" data-doctor="nelly">
-                                <i class="fa-solid fa-info-circle"></i>
-                                <span>Подробнее</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Doctor 2 - Ерік -->
-                <div class="doctor-card-beautiful" data-specialization="endodontist">
-                    <div class="doctor-image-beautiful">
-                        <img src="img/eric.png" alt="Ерік Оңдабаев Қуанышұлы" loading="lazy">
-                        <div class="doctor-overlay-beautiful">
-                            <div class="overlay-content-doctors">
-                                <button class="view-doctor-btn" data-doctor="erik">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>Подробнее</span>
-                                </button>
-                                <button class="book-doctor-btn" data-doctor="erik">
-                                    <i class="fa-solid fa-calendar-plus"></i>
-                                    <span>Записаться</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="experience-badge">5 лет</div>
-                    </div>
-                    
-                    <div class="doctor-content-beautiful">
-                        <div class="doctor-header-beautiful">
-                            <h3>Оңдабаев Ерік Қуанышұлы</h3>
-                            <div class="doctor-rating">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <span class="rating-text">4.9</span>
-                            </div>
-                        </div>
-                        
-                        <p class="doctor-position-beautiful">Эндодонтист</p>
-                        
-                        <div class="doctor-specialties">
-                            <span class="specialty-tag primary">Эндодонтия</span>
-                            <span class="specialty-tag">Микроскоп</span>
-                            <span class="specialty-tag">Каналы</span>
-                        </div>
-                        
-                        <p class="doctor-description-beautiful">
-                            Специализируется на лечении корневых каналов под микроскопом, 
-                            проводит сложное эндодонтическое лечение с высокой точностью.
-                        </p>
-                        
-                        <div class="doctor-stats-beautiful">
-                            <div class="stat-item">
-                                <i class="fa-solid fa-calendar-check"></i>
-                                <span>5 лет стажа</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fa-solid fa-microscope"></i>
-                                <span>Работа под микроскопом</span>
-                            </div>
-                        </div>
-                        
-                        <div class="doctor-actions-beautiful">
-                            <button class="primary-btn-doctors" data-doctor="erik">
-                                <i class="fa-solid fa-calendar-plus"></i>
-                                <span>Записаться на прием</span>
-                            </button>
-                            <button class="secondary-btn-doctors" data-doctor="erik">
-                                <i class="fa-solid fa-info-circle"></i>
-                                <span>Подробнее</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Doctor 3 - Ернар -->
-                <div class="doctor-card-beautiful" data-specialization="orthodontist">
-                    <div class="doctor-image-beautiful">
-                        <img src="img/yernar.JPG" alt="Ернар Ержанович" loading="lazy">
-                        <div class="doctor-overlay-beautiful">
-                            <div class="overlay-content-doctors">
-                                <button class="view-doctor-btn" data-doctor="yernar">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>Подробнее</span>
-                                </button>
-                                <button class="book-doctor-btn" data-doctor="yernar">
-                                    <i class="fa-solid fa-calendar-plus"></i>
-                                    <span>Записаться</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="experience-badge">3 года</div>
-                    </div>
-                    
-                    <div class="doctor-content-beautiful">
-                        <div class="doctor-header-beautiful">
-                            <h3>Толен Ернар Ержанович </h3>
-                            <div class="doctor-rating">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <span class="rating-text">4.8</span>
-                            </div>
-                        </div>
-                        
-                        <p class="doctor-position-beautiful">Стоматолог-ортодонт</p>
-                        
-                        <div class="doctor-specialties">
-                            <span class="specialty-tag primary">Ортодонтия</span>
-                            <span class="specialty-tag">Брекеты</span>
-                            <span class="specialty-tag">Элайнеры</span>
-                        </div>
-                        
-                        <p class="doctor-description-beautiful">
-                            Специализируется на выравнивании зубов, коррекции прикуса 
-                            с помощью брекетов, элайнеров и других ортодонтических аппаратов.
-                        </p>
-                        
-                        <div class="doctor-stats-beautiful">
-                            <div class="stat-item">
-                                <i class="fa-solid fa-calendar-check"></i>
-                                <span>3 года стажа</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fa-solid fa-smile"></i>
-                                <span>200+ улыбок</span>
-                            </div>
-                        </div>
-                        
-                        <div class="doctor-actions-beautiful">
-                            <button class="primary-btn-doctors" data-doctor="yernar">
-                                <i class="fa-solid fa-calendar-plus"></i>
-                                <span>Записаться на прием</span>
-                            </button>
-                            <button class="secondary-btn-doctors" data-doctor="yernar">
-                                <i class="fa-solid fa-info-circle"></i>
-                                <span>Подробнее</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Doctor 4 - Акмарал -->
-                <div class="doctor-card-beautiful" data-specialization="therapist">
-                    <div class="doctor-image-beautiful">
-                        <img src="img/akmaral.JPG" alt="Акмарал Айдарбековна" loading="lazy">
-                        <div class="doctor-overlay-beautiful">
-                            <div class="overlay-content-doctors">
-                                <button class="view-doctor-btn" data-doctor="akmaral">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>Подробнее</span>
-                                </button>
-                                <button class="book-doctor-btn" data-doctor="akmaral">
-                                    <i class="fa-solid fa-calendar-plus"></i>
-                                    <span>Записаться</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="experience-badge">3 года</div>
-                    </div>
-                    
-                    <div class="doctor-content-beautiful">
-                        <div class="doctor-header-beautiful">
-                            <h3>Расылханова Акмарал Айдарбековна</h3>
-                            <div class="doctor-rating">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <span class="rating-text">4.9</span>
-                            </div>
-                        </div>
-                        
-                        <p class="doctor-position-beautiful">Стоматолог-терапевт</p>
-                        
-                        <div class="doctor-specialties">
-                            <span class="specialty-tag primary">Терапия</span>
-                            <span class="specialty-tag">Реставрация</span>
-                            <span class="specialty-tag">Эндодонтия</span>
-                        </div>
-                        
-                        <p class="doctor-description-beautiful">
-                            Специализируется на лечении кариеса и его осложнений, 
-                            проводит эстетические реставрации с индивидуальным подходом.
-                        </p>
-                        
-                        <div class="doctor-stats-beautiful">
-                            <div class="stat-item">
-                                <i class="fa-solid fa-calendar-check"></i>
-                                <span>3 года стажа</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fa-solid fa-heart"></i>
-                                <span>Индивидуальный подход</span>
-                            </div>
-                        </div>
-                        
-                        <div class="doctor-actions-beautiful">
-                            <button class="primary-btn-doctors" data-doctor="akmaral">
-                                <i class="fa-solid fa-calendar-plus"></i>
-                                <span>Записаться на прием</span>
-                            </button>
-                            <button class="secondary-btn-doctors" data-doctor="akmaral">
-                                <i class="fa-solid fa-info-circle"></i>
-                                <span>Подробнее</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Doctor 5 - Мерей -->
-                <div class="doctor-card-beautiful" data-specialization="therapist">
-                    <div class="doctor-image-beautiful">
-                        <img src="img/merey.PNG" alt="Мерей Амирулловна" loading="lazy">
-                        <div class="doctor-overlay-beautiful">
-                            <div class="overlay-content-doctors">
-                                <button class="view-doctor-btn" data-doctor="merey">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>Подробнее</span>
-                                </button>
-                                <button class="book-doctor-btn" data-doctor="merey">
-                                    <i class="fa-solid fa-calendar-plus"></i>
-                                    <span>Записаться</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="experience-badge">8 лет</div>
-                    </div>
-                    
-                    <div class="doctor-content-beautiful">
-                        <div class="doctor-header-beautiful">
-                            <h3>Тлеубаева Мерей Амирулловна</h3>
-                            <div class="doctor-rating">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <span class="rating-text">4.9</span>
-                            </div>
-                        </div>
-                        
-                        <p class="doctor-position-beautiful">Стоматолог-терапевт</p>
-                        
-                        <div class="doctor-specialties">
-                            <span class="specialty-tag primary">Терапия</span>
-                            <span class="specialty-tag">Диагностика</span>
-                            <span class="specialty-tag">Профилактика</span>
-                        </div>
-                        
-                        <p class="doctor-description-beautiful">
-                            Проводит диагностику и лечение кариеса и его осложнений. 
-                            Особое внимание уделяет профилактике и комфорту пациентов.
-                        </p>
-                        
-                        <div class="doctor-stats-beautiful">
-                            <div class="stat-item">
-                                <i class="fa-solid fa-calendar-check"></i>
-                                <span>8 лет стажа</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fa-solid fa-shield-heart"></i>
-                                <span>Профилактика</span>
-                            </div>
-                        </div>
-                        
-                        <div class="doctor-actions-beautiful">
-                            <button class="primary-btn-doctors" data-doctor="merey">
-                                <i class="fa-solid fa-calendar-plus"></i>
-                                <span>Записаться на прием</span>
-                            </button>
-                            <button class="secondary-btn-doctors" data-doctor="merey">
-                                <i class="fa-solid fa-info-circle"></i>
-                                <span>Подробнее</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Doctor 6 - Улмекен -->
-                <div class="doctor-card-beautiful" data-specialization="therapist">
-                    <div class="doctor-image-beautiful">
-                        <img src="img/ulmeken.JPG" alt="Улмекен Аширханова Тенелбаевна" loading="lazy">
-                        <div class="doctor-overlay-beautiful">
-                            <div class="overlay-content-doctors">
-                                <button class="view-doctor-btn" data-doctor="ulmeken">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>Подробнее</span>
-                                </button>
-                                <button class="book-doctor-btn" data-doctor="ulmeken">
-                                    <i class="fa-solid fa-calendar-plus"></i>
-                                    <span>Записаться</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="experience-badge">5 лет</div>
-                    </div>
-                    
-                    <div class="doctor-content-beautiful">
-                        <div class="doctor-header-beautiful">
-                            <h3>Аширханова Улмекен Тенелбаевна</h3>
-                            <div class="doctor-rating">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <span class="rating-text">4.8</span>
-                            </div>
-                        </div>
-                        
-                        <p class="doctor-position-beautiful">Стоматолог-терапевт</p>
-                        
-                        <div class="doctor-specialties">
-                            <span class="specialty-tag primary">Терапия</span>
-                            <span class="specialty-tag">Реставрация</span>
-                            <span class="specialty-tag">Эндодонтия</span>
-                        </div>
-                        
-                        <p class="doctor-description-beautiful">
-                            Специализируется на лечении кариеса, пульпита и периодонтита, 
-                            проводит качественные эстетические реставрации.
-                        </p>
-                        
-                        <div class="doctor-stats-beautiful">
-                            <div class="stat-item">
-                                <i class="fa-solid fa-calendar-check"></i>
-                                <span>5 лет стажа</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fa-solid fa-palette"></i>
-                                <span>Эстетика</span>
-                            </div>
-                        </div>
-                        
-                        <div class="doctor-actions-beautiful">
-                            <button class="primary-btn-doctors" data-doctor="ulmeken">
-                                <i class="fa-solid fa-calendar-plus"></i>
-                                <span>Записаться на прием</span>
-                            </button>
-                            <button class="secondary-btn-doctors" data-doctor="ulmeken">
-                                <i class="fa-solid fa-info-circle"></i>
-                                <span>Подробнее</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ─────── Doctor Modal ─────── -->
-    <div class="doctor-modal-beautiful" id="doctorModal">
-        <div class="modal-overlay-doctors"></div>
-        <div class="modal-content-doctors">
-            <div class="modal-header-doctors">
-                <h3 id="modalDoctorName">Информация о враче</h3>
-                <button class="close-button-doctors" id="closeDoctorModal">
-                    <i class="fa-solid fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body-doctors">
-                <div class="doctor-modal-content">
-                    <div class="modal-doctor-image">
-                        <img id="modalDoctorPhoto" src="/placeholder.svg" alt="">
-                        <div class="modal-doctor-badges">
-                            <div class="modal-experience-badge" id="modalExperience"></div>
-                            <div class="modal-rating-badge">
-                                <div class="stars" id="modalRating"></div>
-                                <span id="modalRatingText"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-doctor-info">
-                        <div class="modal-doctor-header">
-                            <h4 id="modalDoctorFullName"></h4>
-                            <p id="modalDoctorPosition"></p>
-                        </div>
-                        
-                        <div class="modal-specialties" id="modalSpecialties"></div>
-                        
-                        <div class="modal-description">
-                            <h5>О враче</h5>
-                            <p id="modalDoctorDescription"></p>
-                        </div>
-                        
-                        <div class="modal-achievements">
-                            <h5>Достижения и квалификация</h5>
-                            <ul id="modalAchievements"></ul>
-                        </div>
-                        
-                        <div class="modal-schedule">
-                            <h5>Расписание приема</h5>
-                            <div class="schedule-grid" id="modalSchedule"></div>
-                        </div>
-                        
-                        <div class="modal-actions">
-                            <button class="modal-book-btn" id="modalBookBtn">
-                                <i class="fa-solid fa-calendar-plus"></i>
-                                <span>Записаться на прием</span>
-                            </button>
-                            <button class="modal-contact-btn">
-                                <i class="fa-solid fa-phone"></i>
-                                <span>+7 705 402 61 81</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ─────── CTA Section ─────── -->
-    <section class="doctors-cta-beautiful">
-        <div class="cta-background-doctors">
-            <div class="cta-shapes-doctors">
-                <div class="cta-shape-doctors cta-shape-doctors-1"></div>
-                <div class="cta-shape-doctors cta-shape-doctors-2"></div>
-                <div class="cta-shape-doctors cta-shape-doctors-3"></div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="cta-content-doctors">
-                <div class="cta-text-doctors">
-                    <h2>Запишитесь на консультацию к нашим специалистам</h2>
-                    <p>Наши врачи подберут оптимальный план лечения и ответят на все ваши вопросы. Первичная консультация включает осмотр и составление плана лечения.</p>
-                    
-                    <div class="cta-benefits-doctors">
-                        <div class="benefit-doctors">
-                            <div class="benefit-icon-doctors">
-                                <i class="fa-solid fa-user-doctor"></i>
-                            </div>
-                            <span>Опытные специалисты</span>
-                        </div>
-                        <div class="benefit-doctors">
-                            <div class="benefit-icon-doctors">
-                                <i class="fa-solid fa-calendar-check"></i>
-                            </div>
-                            <span>Удобное время записи</span>
-                        </div>
-                        <div class="benefit-doctors">
-                            <div class="benefit-icon-doctors">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                            <span>Индивидуальный подход</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="cta-action-doctors">
-                    <a href="kontakty.html" class="cta-btn-doctors">
-                        <i class="fa-solid fa-calendar-plus"></i>
-                        <span>Записаться на прием</span>
-                        <div class="btn-glow-doctors"></div>
-                    </a>
-                    <div class="cta-contact-doctors">
-                        <span>Или позвоните:</span>
-                        <a href="tel:+77054026181">+7 705 402 61 81</a>
-                    </div>
+                    <p>Загружаем информацию о врачах...</p>
                 </div>
             </div>
         </div>
@@ -840,6 +301,6 @@
     </footer>
 
     <!-- ─────── JS ─────── -->
-    <script src="js/script.js"></script>
+    <script src="js/doctors-script.js"></script>
 </body>
 </html>
