@@ -2,10 +2,9 @@
 const DOCTORS_GOOGLE_SHEETS_CONFIG = {
   API_KEY: "AIzaSyBHPY2RgfCFMe0Kqn_fY7LV1IgPUUEPnms",
   SPREADSHEET_ID: "1D5TTNXETLfPc3tAU1D9uVgYo9juvzRkUhZBznjp8CJ8",
-  RANGE: "Врачи!A:N", // ФИО, С��аж, Специализация, Ссылка на фото, Описание, Сертификат1-7, фото до и после1-4
+  RANGE: "Врачи!A:N", // ФИО, Стаж, Специализация, Ссылка на фото, Описание, Сертификат1-7, фото до и после1-4
   CACHE_DURATION: 5 * 60 * 1000, // 5 минут кеширования
 }
-
 
 // ===== ОСНОВНОЙ КЛАСС ДЛЯ УПРАВЛЕНИЯ СТРАНИЦЕЙ ВРАЧЕЙ =====
 class DoctorsPageManager {
@@ -28,6 +27,7 @@ class DoctorsPageManager {
       // Инициализация компонентов
       this.initMobileMenu()
       this.initFilters()
+      this.initModal()
 
       // Загрузка данных из Google Sheets
       await this.loadDoctorsData()
@@ -210,6 +210,10 @@ class DoctorsPageManager {
           <img src="${doctor.photoUrl}" alt="${doctor.name}" loading="lazy" onerror="this.src='/placeholder.svg?height=300&width=300'">
           <div class="doctor-overlay-beautiful">
             <div class="overlay-content-doctors">
+              <button class="view-doctor-btn" data-doctor-id="${doctor.id}">
+                <i class="fa-solid fa-info-circle"></i>
+                <span>Подробнее</span>
+              </button>
               <button class="book-doctor-btn" data-doctor-name="${doctor.name}">
                 <i class="fa-solid fa-calendar-plus"></i>
                 <span>Записаться</span>
@@ -265,9 +269,13 @@ class DoctorsPageManager {
           </div>
           
           <div class="doctor-actions-beautiful">
+            <button class="secondary-btn-doctors view-details-btn" data-doctor-id="${doctor.id}">
+              <i class="fa-solid fa-info-circle"></i>
+              <span>Подробнее</span>
+            </button>
             <button class="primary-btn-doctors" data-doctor-name="${doctor.name}">
               <i class="fa-solid fa-calendar-plus"></i>
-              <span>Записаться на прием</span>
+              <span>Записаться</span>
             </button>
           </div>
         </div>
@@ -312,9 +320,147 @@ class DoctorsPageManager {
       btn.addEventListener("click", (e) => {
         e.stopPropagation()
         const doctorName = btn.getAttribute("data-doctor-name")
-        this.handleBookingClick(doctorName)
+        if (doctorName) {
+          this.handleBookingClick(doctorName)
+        }
       })
     })
+
+    // Кнопки "Подробнее"
+    document.querySelectorAll(".view-doctor-btn, .view-details-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation()
+        const doctorId = btn.getAttribute("data-doctor-id")
+        if (doctorId) {
+          this.showDoctorDetails(doctorId)
+        }
+      })
+    })
+  }
+
+  // ===== ПОКАЗ ДЕТАЛЬНОЙ ИНФОРМАЦИИ О ВРАЧЕ =====
+  showDoctorDetails(doctorId) {
+    const doctor = this.doctorsData.find(d => d.id === doctorId)
+    if (!doctor) return
+
+    // Заполняем модальное окно данными врача
+    document.getElementById("modalDoctorPhoto").src = doctor.photoUrl
+    document.getElementById("modalDoctorPhoto").alt = doctor.name
+    document.getElementById("modalDoctorName").textContent = doctor.name
+    document.getElementById("modalDoctorSpecialization").textContent = doctor.specialization
+    document.getElementById("modalDoctorExperience").textContent = doctor.experience ? `Стаж: ${doctor.experience}` : ""
+    document.getElementById("modalDoctorRating").textContent = doctor.rating
+    document.getElementById("modalDoctorDescription").textContent = doctor.description || "Опытный специалист с индивидуальным подходом к каждому пациенту."
+
+    // Устанавливаем обработчик для кнопки записи в модальном окне
+    const modalBookBtn = document.getElementById("modalBookBtn")
+    modalBookBtn.onclick = () => this.handleBookingClick(doctor.name)
+
+    // Заполняем сертификаты
+    this.renderCertificates(doctor.certificates)
+
+    // Заполняем фото работ
+    this.renderBeforeAfterPhotos(doctor.beforeAfterPhotos)
+
+    // Показываем модальное окно
+    document.getElementById("doctorModalOverlay").classList.add("active")
+    document.body.style.overflow = "hidden"
+  }
+
+  // ===== ОТОБРАЖЕНИЕ СЕРТИФИКАТОВ =====
+  renderCertificates(certificates) {
+    const certificatesGrid = document.getElementById("certificatesGrid")
+    const certificatesSection = document.getElementById("certificatesSection")
+
+    if (!certificates || certificates.length === 0) {
+      certificatesSection.style.display = "none"
+      return
+    }
+
+    certificatesSection.style.display = "block"
+    certificatesGrid.innerHTML = certificates.map((cert, index) => `
+      <div class="certificate-item" onclick="window.doctorsManager.showImageViewer('${cert}', 'Сертификат ${index + 1}')">
+        <img src="${cert}" alt="Сертификат ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
+        <div class="certificate-overlay">
+          Сертификат ${index + 1}
+        </div>
+      </div>
+    `).join("")
+  }
+
+  // ===== ОТОБРАЖЕНИЕ ФОТО ДО И ПОСЛЕ =====
+  renderBeforeAfterPhotos(photos) {
+    const beforeAfterGrid = document.getElementById("beforeAfterGrid")
+    const beforeAfterSection = document.getElementById("beforeAfterSection")
+
+    if (!photos || photos.length === 0) {
+      beforeAfterSection.style.display = "none"
+      return
+    }
+
+    beforeAfterSection.style.display = "block"
+    beforeAfterGrid.innerHTML = photos.map((photo, index) => `
+      <div class="before-after-item" onclick="window.doctorsManager.showImageViewer('${photo}', 'Работа врача ${index + 1}')">
+        <img src="${photo}" alt="Работа врача ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
+        <div class="before-after-overlay">
+          Работа ${index + 1}
+        </div>
+      </div>
+    `).join("")
+  }
+
+  // ===== ПОКАЗ ПРОСМОТРЩИКА ИЗОБРАЖЕНИЙ =====
+  showImageViewer(imageUrl, caption) {
+    document.getElementById("imageViewerImg").src = imageUrl
+    document.getElementById("imageViewerCaption").textContent = caption
+    document.getElementById("imageViewerOverlay").classList.add("active")
+  }
+
+  // ===== ИНИЦИАЛИЗАЦИЯ МОДАЛЬНОГО ОКНА =====
+  initModal() {
+    // Закрытие модального окна врача
+    document.getElementById("modalClose").addEventListener("click", () => {
+      this.closeDoctorModal()
+    })
+
+    document.getElementById("doctorModalOverlay").addEventListener("click", (e) => {
+      if (e.target === document.getElementById("doctorModalOverlay")) {
+        this.closeDoctorModal()
+      }
+    })
+
+    // Закрытие просмотрщика изображений
+    document.getElementById("imageViewerClose").addEventListener("click", () => {
+      this.closeImageViewer()
+    })
+
+    document.getElementById("imageViewerOverlay").addEventListener("click", (e) => {
+      if (e.target === document.getElementById("imageViewerOverlay")) {
+        this.closeImageViewer()
+      }
+    })
+
+    // Закрытие по Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        if (document.getElementById("imageViewerOverlay").classList.contains("active")) {
+          this.closeImageViewer()
+        } else if (document.getElementById("doctorModalOverlay").classList.contains("active")) {
+          this.closeDoctorModal()
+        }
+      }
+    })
+  }
+
+  // ===== ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ВРАЧА =====
+  closeDoctorModal() {
+    document.getElementById("doctorModalOverlay").classList.remove("active")
+    document.body.style.overflow = ""
+  }
+
+  // ===== ЗАКРЫТИЕ ПРОСМОТРЩИКА ИЗОБРАЖЕНИЙ =====
+  closeImageViewer() {
+    document.getElementById("imageViewerOverlay").classList.remove("active")
   }
 
   // ===== ОБРАБОТКА ЗАПИСИ К ВРАЧУ =====

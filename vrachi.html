@@ -261,6 +261,76 @@
         </div>
     </section>
 
+    <!-- ─────── Doctor Details Modal ─────── -->
+    <div class="doctor-modal-overlay" id="doctorModalOverlay">
+        <div class="doctor-modal" id="doctorModal">
+            <button class="modal-close" id="modalClose">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="doctor-main-info">
+                        <div class="doctor-photo">
+                            <img id="modalDoctorPhoto" src="/placeholder.svg" alt="">
+                        </div>
+                        <div class="doctor-info">
+                            <h2 id="modalDoctorName"></h2>
+                            <p class="doctor-specialization" id="modalDoctorSpecialization"></p>
+                            <div class="doctor-experience" id="modalDoctorExperience"></div>
+                            <div class="doctor-rating-modal">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="rating-text" id="modalDoctorRating"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="book-appointment-btn" id="modalBookBtn">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        <span>Записаться на прием</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="doctor-description-section">
+                        <h3><i class="fa-solid fa-user-doctor"></i> О враче</h3>
+                        <p id="modalDoctorDescription"></p>
+                    </div>
+
+                    <div class="certificates-section" id="certificatesSection">
+                        <h3><i class="fa-solid fa-certificate"></i> Сертификаты и дипломы</h3>
+                        <div class="certificates-grid" id="certificatesGrid">
+                            <!-- Сертификаты будут добавлены динамически -->
+                        </div>
+                    </div>
+
+                    <div class="before-after-section" id="beforeAfterSection">
+                        <h3><i class="fa-solid fa-images"></i> Работы врача</h3>
+                        <div class="before-after-grid" id="beforeAfterGrid">
+                            <!-- Фото до и после будут добавлены динамически -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────── Image Viewer Modal ─────── -->
+    <div class="image-viewer-overlay" id="imageViewerOverlay">
+        <div class="image-viewer">
+            <button class="image-viewer-close" id="imageViewerClose">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <img id="imageViewerImg" src="/placeholder.svg" alt="">
+            <div class="image-viewer-caption" id="imageViewerCaption"></div>
+        </div>
+    </div>
+
     <!-- ─────── Footer ─────── -->
     <footer class="footer">
         <div class="container">
