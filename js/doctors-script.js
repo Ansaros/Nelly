@@ -1,7 +1,7 @@
 // ===== КОНФИГУРАЦИЯ GOOGLE SHEETS ДЛЯ ВРАЧЕЙ =====
 const DOCTORS_GOOGLE_SHEETS_CONFIG = {
-  API_KEY: "AIzaSyBHPY2RgfCFMe0Kqn_fY7LV1IgPUUEPnms",
-  SPREADSHEET_ID: "1D5TTNXETLfPc3tAU1D9uVgYo9juvzRkUhZBznjp8CJ8",
+  API_KEY: "AIzaSyAPNoe4hXwejLxnUr04bqEeWZRE7VqJYP4",
+  SPREADSHEET_ID: "1TuQfnrDrBySjOJWSeksdL8WbrCNfytIypw-u-eRaJzs",
   RANGE: "Врачи!A:N", // ФИО, Стаж, Специализация, Ссылка на фото, Описание, Сертификат1-7, фото до и после1-4
   CACHE_DURATION: 5 * 60 * 1000, // 5 минут кеширования
 }
@@ -126,7 +126,7 @@ class DoctorsPageManager {
       name: name,
       experience: this.cleanText(row[1]) || "",
       specialization: this.cleanText(row[2]) || "Стоматолог",
-      photoUrl: this.cleanText(row[3]) || "/placeholder.svg?height=300&width=300",
+      photoUrl: this.cleanText(row[3]) || "img/placeholder.svg",
       description: this.cleanText(row[4]) || "",
       certificates: this.extractUrls(row.slice(5, 12)),
       beforeAfterPhotos: this.extractUrls(row.slice(12, 16)),
@@ -207,7 +207,7 @@ class DoctorsPageManager {
     return `
       <div class="doctor-card-beautiful ${isMainDoctor ? "featured" : ""}" data-specialization="${doctor.specialization.toLowerCase()}" data-doctor-id="${doctor.id}">
         <div class="doctor-image-beautiful">
-          <img src="${doctor.photoUrl}" alt="${doctor.name}" loading="lazy" onerror="this.src='/placeholder.svg?height=300&width=300'">
+          <img src="${doctor.photoUrl}" alt="${doctor.name}" loading="lazy" onerror="this.src='img/placeholder.svg'">
           <div class="doctor-overlay-beautiful">
             <div class="overlay-content-doctors">
               <button class="view-doctor-btn" data-doctor-id="${doctor.id}">

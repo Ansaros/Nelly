@@ -338,6 +338,7 @@ body {
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ ВРАЧЕЙ ===== */
 
 /* Статус загрузки данных */
+
 .doctors-status-section {
   padding: 20px 0;
   background: white;
@@ -384,11 +385,12 @@ body {
 /* Hero Section для врачей */
 .doctors-hero-beautiful {
   position: relative;
-  min-height: 100vh;
+  min-height: fit-content;
+  padding: 40px 0;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #a374aa 0%, #8e5a91 100%);
+  background: linear-gradient(164deg, #a374aa 50%, #78537d 90%);
 }
 
 .hero-background-doctors {
@@ -778,6 +780,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
+      justify-items: center;
+
 }
 
 .loading-doctors {
@@ -851,6 +855,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
+  max-width: 362px;
 }
 
 .doctor-card-beautiful:hover {
@@ -1517,11 +1522,6 @@ body {
   .hero-stats-doctors {
     justify-content: center;
     gap: 30px;
-  }
-
-  .doctors-list-beautiful {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
 
   .doctors-filter-buttons {
