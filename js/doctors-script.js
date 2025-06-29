@@ -6,6 +6,71 @@ const DOCTORS_GOOGLE_SHEETS_CONFIG = {
   CACHE_DURATION: 5 * 60 * 1000, // 5 минут кеширования
 }
 
+// ===== УТИЛИТЫ ДЛЯ КОНВЕРТАЦИИ GOOGLE DRIVE ССЫЛОК =====
+class GoogleDriveConverter {
+  // Извлечение ID файла из ссылки Google Drive
+  static extractFileId(url) {
+    if (!url || typeof url !== 'string') return null;
+    
+    const patterns = [
+      /\/file\/d\/([a-zA-Z0-9-_]+)/,  // Основной паттерн
+      /id=([a-zA-Z0-9-_]+)/,         // Альтернативный
+      /\/d\/([a-zA-Z0-9-_]+)/        // Короткий формат
+    ];
+
+    for (let pattern of patterns) {
+      const match = url.match(pattern);
+      if (match) {
+        return match[1];
+      }
+    }
+    return null;
+  }
+
+  // Создание thumbnail URL
+  static createThumbnailUrl(fileId, size = 'w1000') {
+    if (!fileId) return null;
+    return `https://drive.google.com/thumbnail?id=${fileId}&sz=${size}`;
+  }
+
+  // Создание direct URL
+  static createDirectUrl(fileId) {
+    if (!fileId) return null;
+    return `https://drive.google.com/uc?export=view&id=${fileId}`;
+  }
+
+  // Проверка, является ли URL ссылкой Google Drive
+  static isGoogleDriveUrl(url) {
+    if (!url || typeof url !== 'string') return false;
+    return url.includes('drive.google.com') && 
+           (url.includes('/file/d/') || url.includes('id=') || url.includes('/d/'));
+  }
+
+  // Конвертация ссылки Google Drive в thumbnail
+  static convertToThumbnail(url, size = 'w1000') {
+    if (!this.isGoogleDriveUrl(url)) {
+      return url; // Возвращаем оригинальную ссылку, если это не Google Drive
+    }
+
+    const fileId = this.extractFileId(url);
+    if (!fileId) {
+      console.warn('Не удалось извлечь ID из ссылки Google Drive:', url);
+      return url;
+    }
+
+    const thumbnailUrl = this.createThumbnailUrl(fileId, size);
+    console.log(`Конвертирована ссылка: ${url} -> ${thumbnailUrl}`);
+    return thumbnailUrl;
+  }
+
+  // Конвертация массива ссылок
+  static convertUrlsArray(urls, size = 'w1000') {
+    if (!Array.isArray(urls)) return urls;
+    
+    return urls.map(url => this.convertToThumbnail(url, size));
+  }
+}
+
 // ===== ОСНОВНОЙ КЛАСС ДЛЯ УПРАВЛЕНИЯ СТРАНИЦЕЙ ВРАЧЕЙ =====
 class DoctorsPageManager {
   constructor() {
@@ -16,6 +81,7 @@ class DoctorsPageManager {
     this.retryCount = 0
     this.maxRetries = 3
     this.currentFilter = "all"
+    this.imageSize = "w1000" // Размер изображений по умолчанию
 
     this.init()
   }
@@ -121,15 +187,29 @@ class DoctorsPageManager {
       return null
     }
 
+    // Получаем и конвертируем URL фото
+    const originalPhotoUrl = this.cleanText(row[3]) || "img/placeholder.svg"
+    const convertedPhotoUrl = GoogleDriveConverter.convertToThumbnail(originalPhotoUrl, this.imageSize)
+
+    // Получаем и конвертируем URLs сертификатов и фото работ
+    const originalCertificates = this.extractUrls(row.slice(5, 12))
+    const originalBeforeAfterPhotos = this.extractUrls(row.slice(12, 16))
+
+    const convertedCertificates = GoogleDriveConverter.convertUrlsArray(originalCertificates, this.imageSize)
+    const convertedBeforeAfterPhotos = GoogleDriveConverter.convertUrlsArray(originalBeforeAfterPhotos, this.imageSize)
+
     return {
       id: `doctor_${rowNumber}`,
       name: name,
       experience: this.cleanText(row[1]) || "",
       specialization: this.cleanText(row[2]) || "Стоматолог",
-      photoUrl: this.cleanText(row[3]) || "img/placeholder.svg",
+      photoUrl: convertedPhotoUrl,
+      originalPhotoUrl: originalPhotoUrl, // Сохраняем оригинальную ссылку
       description: this.cleanText(row[4]) || "",
-      certificates: this.extractUrls(row.slice(5, 12)),
-      beforeAfterPhotos: this.extractUrls(row.slice(12, 16)),
+      certificates: convertedCertificates,
+      originalCertificates: originalCertificates, // Сохраняем оригинальные ссылки
+      beforeAfterPhotos: convertedBeforeAfterPhotos,
+      originalBeforeAfterPhotos: originalBeforeAfterPhotos, // Сохраняем оригинальные ссылки
       rating: this.generateRating(),
       slug: this.generateSlug(name),
     }
@@ -207,7 +287,7 @@ class DoctorsPageManager {
     return `
       <div class="doctor-card-beautiful ${isMainDoctor ? "featured" : ""}" data-specialization="${doctor.specialization.toLowerCase()}" data-doctor-id="${doctor.id}">
         <div class="doctor-image-beautiful">
-          <img src="${doctor.photoUrl}" alt="${doctor.name}" loading="lazy" onerror="this.src='img/placeholder.svg'">
+          <img src="${doctor.photoUrl}" alt="${doctor.name}" loading="lazy" onerror="this.src='img/placeholder.svg'" data-original-url="${doctor.originalPhotoUrl || ''}">
           <div class="doctor-overlay-beautiful">
             <div class="overlay-content-doctors">
               <button class="view-doctor-btn" data-doctor-id="${doctor.id}">
@@ -227,14 +307,6 @@ class DoctorsPageManager {
           <div class="doctor-header-beautiful">
             <h3>${doctor.name}</h3>
             <div class="doctor-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <span class="rating-text">${doctor.rating}</span>
             </div>
           </div>
           
@@ -556,6 +628,33 @@ class DoctorsPageManager {
     }
   }
 
+  // ===== ИЗМЕНЕНИЕ РАЗМЕРА ИЗОБРАЖЕНИЙ =====
+  changeImageSize(newSize) {
+    this.imageSize = newSize
+    console.log(`Изменен размер изображений на: ${newSize}`)
+    
+    // Перезагружаем данные с новым размером
+    this.doctorsData.forEach(doctor => {
+      // Конвертируем фото врача
+      if (doctor.originalPhotoUrl) {
+        doctor.photoUrl = GoogleDriveConverter.convertToThumbnail(doctor.originalPhotoUrl, newSize)
+      }
+      
+      // Конвертируем сертификаты
+      if (doctor.originalCertificates) {
+        doctor.certificates = GoogleDriveConverter.convertUrlsArray(doctor.originalCertificates, newSize)
+      }
+      
+      // Конвертируем фото работ
+      if (doctor.originalBeforeAfterPhotos) {
+        doctor.beforeAfterPhotos = GoogleDriveConverter.convertUrlsArray(doctor.originalBeforeAfterPhotos, newSize)
+      }
+    })
+    
+    // Перерисовываем врачей
+    this.renderDoctors()
+  }
+
   // ===== ИНИЦИАЛИЗАЦИЯ МОБИЛЬНОГО МЕНЮ =====
   initMobileMenu() {
     try {
@@ -677,6 +776,18 @@ class DoctorsPageUtils {
       console.error("Ошибка прокрутки:", error)
     }
   }
+
+  // Утилита для ручной конвертации ссылок (если нужно)
+  static convertGoogleDriveLink(url, size = 'w1000') {
+    return GoogleDriveConverter.convertToThumbnail(url, size)
+  }
+
+  // Утилита для изменения размера изображений
+  static changeImageSize(size) {
+    if (window.doctorsManager) {
+      window.doctorsManager.changeImageSize(size)
+    }
+  }
 }
 
 // ===== ИНИЦИАЛИЗАЦИЯ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ =====
@@ -686,6 +797,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Создаем глобальный экземпляр менеджера врачей
     window.doctorsManager = new DoctorsPageManager()
+
+    // Делаем GoogleDriveConverter доступным глобально
+    window.GoogleDriveConverter = GoogleDriveConverter
 
     console.log("Страница врачей инициализирована успешно")
   } catch (error) {
