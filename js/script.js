@@ -692,20 +692,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Sample data for different cases
     const caseData = {
       1: {
-        before: 'img/do6.jfif',
-        after: 'img/posle6.jfif',
+        before: '../img/do6.jfif',
+        after: '../img/posle6.jfif',
         title: 'Коронки цирконевые',
         tags: ['E-max', 'Коронки']
       },
       2: {
-        before: 'img/do7.jfif',
-        after: 'img/posle7.jfif',
+        before: '../img/do7.jfif',
+        after: '../img/posle7.jfif',
         title: 'Закрытие тремы брекетами',
         tags: ['Брекеты', 'Ортодонтия']
       },
       3: {
-        before: 'img/do4.jfif',
-        after: 'img/posle4.jfif',
+        before: '../img/do4.jfif',
+        after: '../img/posle4.jfif',
         title: 'Брекет-система: металлические лигатурные',
         tags: ['Ортодонтия', 'Брекет-система']
       }
@@ -1445,7 +1445,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nelly: {
       name: "Нелли Курмаева Ринатовна",
       position: "Стоматолог-терапевт, Главный врач",
-      photo: "img/nellyvrach.JPG",
+      photo: "../img/nellyvrach.JPG",
       experience: "14 лет стажа",
       rating: 5.0,
       specialties: ["Терапия", "Эстетика", "Эндодонтия", "Управление"],
@@ -1470,7 +1470,7 @@ document.addEventListener("DOMContentLoaded", () => {
     erik: {
       name: "Ерік Оңдабаев Қуанышұлы",
       position: "Эндодонтист",
-      photo: "img/eric.png",
+      photo: "../img/eric.png",
       experience: "5 лет стажа",
       rating: 4.9,
       specialties: ["Эндодонтия", "Микроскоп", "Каналы", "Реставрация"],
@@ -1495,7 +1495,7 @@ document.addEventListener("DOMContentLoaded", () => {
     yernar: {
       name: "Ернар Ержанович",
       position: "Стоматолог-ортодонт",
-      photo: "img/yernar.JPG",
+      photo: "../img/yernar.JPG",
       experience: "3 года стажа",
       rating: 4.8,
       specialties: ["Ортодонтия", "Брекеты", "Элайнеры", "Прикус"],
@@ -1520,7 +1520,7 @@ document.addEventListener("DOMContentLoaded", () => {
     akmaral: {
       name: "Акмарал Айдарбековна",
       position: "Стоматолог-терапевт",
-      photo: "img/akmaral.JPG",
+      photo: "../img/akmaral.JPG",
       experience: "3 года стажа",
       rating: 4.9,
       specialties: ["Терапия", "Реставрация", "Эндодонтия", "Профилактика"],
@@ -1545,7 +1545,7 @@ document.addEventListener("DOMContentLoaded", () => {
     merey: {
       name: "Мерей Амирулловна",
       position: "Стоматолог-терапевт",
-      photo: "img/merey.PNG",
+      photo: "../img/merey.PNG",
       experience: "8 лет стажа",
       rating: 4.9,
       specialties: ["Терапия", "Диагностика", "Профилактика", "Эндодонтия"],
@@ -1570,7 +1570,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ulmeken: {
       name: "Улмекен Аширханова Тенелбаевна",
       position: "Стоматолог-терапевт",
-      photo: "img/ulmeken.JPG",
+      photo: "../img/ulmeken.JPG",
       experience: "5 лет стажа",
       rating: 4.8,
       specialties: ["Терапия", "Реставрация", "Эндодонтия", "Эстетика"],
