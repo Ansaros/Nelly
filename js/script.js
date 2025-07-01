@@ -692,20 +692,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Sample data for different cases
     const caseData = {
       1: {
-        before: '../img/do6.jfif',
-        after: '../img/posle6.jfif',
+        before: '/img/do6.jfif',
+        after: '/img/posle6.jfif',
         title: 'Коронки цирконевые',
         tags: ['E-max', 'Коронки']
       },
       2: {
-        before: '../img/do7.jfif',
-        after: '../img/posle7.jfif',
+        before: '/img/do7.jfif',
+        after: '/img/posle7.jfif',
         title: 'Закрытие тремы брекетами',
         tags: ['Брекеты', 'Ортодонтия']
       },
       3: {
-        before: '../img/do4.jfif',
-        after: '../img/posle4.jfif',
+        before: '/img/do4.jfif',
+        after: '/img/posle4.jfif',
         title: 'Брекет-система: металлические лигатурные',
         tags: ['Ортодонтия', 'Брекет-система']
       }
