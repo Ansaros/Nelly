@@ -494,9 +494,36 @@ body {
   font-weight: 600;
 }
 
-.service-icon {
-  font-size: 3rem;
+.price-icon {
   margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #a374aa, #8e5a91);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 25px rgba(163, 116, 170, 0.3);
+  transition: all 0.3s ease;
+}
+
+.service-icon {
+  margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #a374aa, #8e5a91);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 25px rgba(163, 116, 170, 0.3);
+  transition: all 0.3s ease;
 }
 
 .service-item h3 {
@@ -788,8 +815,19 @@ body {
   }
 }
 @media (max-width: 768px) {
+
+  .cta-content-media {
+    display: flex !important;
+    flex-direction: column;
+    }
+
     .hero-new-title {
     font-size: 2rem;
+  }
+
+  
+  .social-links {
+    align-items: center;
   }
 
   .hero-new {
@@ -820,6 +858,10 @@ body {
 
   .header {
     padding: 15px 0;
+  }
+
+  .media-hero-beautiful {
+    min-height: 80vh !important;
   }
 
   .header-container {
@@ -2743,6 +2785,14 @@ body.loaded {
 }
 
 /* CTA Section */
+.cta-content-media {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
 .media-cta-beautiful {
   position: relative;
   padding: 100px 0;
@@ -2795,14 +2845,7 @@ body.loaded {
   animation-delay: 8s;
 }
 
-.cta-content-media {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
+
 
 .cta-text-media {
   color: white;
@@ -2945,29 +2988,6 @@ body.loaded {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-
-
-
-/* ===== БАЗОВЫЕ СТИЛИ ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.6;
-  color: #333;
-  overflow-x: hidden;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* ===== TOP BAR ===== */
@@ -3245,29 +3265,6 @@ body {
   opacity: 1;
   visibility: visible;
 }
-
-/* ===== PRICES PAGE STYLES ===== */
-/* ===== БАЗОВЫЕ СТИЛИ ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.6;
-  color: #333;
-  overflow-x: hidden;
-  background: #fff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 
 /* ===== HEADER ===== */
 .header {
@@ -3636,19 +3633,6 @@ body {
   align-items: center;
   gap: 20px;
   flex: 1;
-}
-
-.service-icon {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #a374aa, #8e5a91);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 20px;
-  flex-shrink: 0;
 }
 
 .service-content-main h3 {
@@ -4246,6 +4230,7 @@ body {
 .guarantee-badge {
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 20px;
   background: rgba(255, 255, 255, 0.12);
   padding: 25px 35px;
@@ -4519,20 +4504,6 @@ body {
   padding: 35px 35px 25px;
 }
 
-.service-icon {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #a374aa, #8e5a91);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 28px;
-  flex-shrink: 0;
-  box-shadow: 0 8px 25px rgba(163, 116, 170, 0.3);
-  transition: all 0.3s ease;
-}
 
 .service-card:hover .service-icon {
   transform: scale(1.1) rotate(5deg);
@@ -4869,12 +4840,22 @@ body {
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
+ 
+
 }
 
 @media (max-width: 768px) {
 
+  .gallery-grid-beautiful {
+    display: block;
+  }
+
+  .video-card-beautiful {
+    margin-bottom: 30px;
+  }
+
   .service-price .price-value {
-    font-size: 1.3rem;;
+    font-size: 1.3rem;
   }
 
   .price-currency {
@@ -4942,6 +4923,10 @@ body {
     gap: 20px;
   }
 
+  .price-icon{
+    display: none;
+  }
+
   .service-icon {
     width: 60px;
     height: 60px;
@@ -4952,18 +4937,10 @@ body {
     font-size: 2.2rem;
   }
 
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
+
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 15px;
-  }
-
   .hero-title-prices {
     font-size: 2.2rem;
   }

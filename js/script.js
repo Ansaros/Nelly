@@ -700,14 +700,14 @@ document.addEventListener("DOMContentLoaded", () => {
       2: {
         before: 'img/do7.jfif',
         after: 'img/posle7.jfif',
-        title: 'Закрытие тремы',
+        title: 'Закрытие тремы брекетами',
         tags: ['Брекеты', 'Ортодонтия']
       },
       3: {
         before: 'img/do4.jfif',
         after: 'img/posle4.jfif',
-        title: 'Лечение кариеса',
-        tags: ['Пломбы', 'Терапия']
+        title: 'Брекет-система: металлические лигатурные',
+        tags: ['Ортодонтия', 'Брекет-система']
       }
     }
     
