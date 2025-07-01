@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Врачи - Nelly dental clinic</title>
+    <link rel="icon" type="image/png" href="img/logo.jpg">
+    
+    <!-- Шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/doctors-styles.css">
+</head>
+<body>
+    <!-- ─────── Top Bar ─────── -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot icon"></i>
+                    <span class="top">Улы Дала, 35, Город Астана</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock icon"></i>
+                    <span class="top">Пн-Пт 10:00-19:00  Сб, Вс 10:00-16:00</span>
+                </div>
+                <div class="info-item phone">
+                    <i class="fa-solid fa-phone icon"></i>
+                    <span>+7 705 402 61 81</span>
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/nelly_dental/" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/77054026181" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────── Header ─────── -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Логотип -->
+            <div class="logo">
+                <a href="index.html">Nelly<span>dental clinic</span></a>
+            </div>
+
+            <!-- Основная навигация (десктоп) -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="ceny.html">ЦЕНЫ</a></li>
+                    <li><a href="keysy.html">КЕЙСЫ</a></li>
+                    <li><a href="vrachi.html" class="active">ВРАЧИ</a></li>
+                    <li><a href="kontakty.html">КОНТАКТЫ</a></li>
+                    <li><a href="media.html">МЕДИА</a></li>
+                </ul>
+            </nav>
+
+            <!-- Бургер-меню -->
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Оверлей для мобильного меню -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Мобильное меню -->
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="close-menu" id="closeMenu">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <div class="mobile-nav-content">
+            <div class="mobile-logo">
+                <span>Nelly</span>
+                <small>dental clinic</small>
+            </div>
+            <ul>
+                <li><a href="ceny.html"><i class="fa-solid fa-tenge-sign"></i>Цены</a></li>
+                <li><a href="keysy.html"><i class="fa-solid fa-images"></i>Кейсы</a></li>
+                <li><a href="vrachi.html"><i class="fa-solid fa-user-doctor"></i>Врачи</a></li>
+                <li><a href="kontakty.html"><i class="fa-solid fa-phone"></i>Контакты</a></li>
+                <li><a href="media.html"><i class="fa-solid fa-play"></i>Медиа</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <a href="tel:+77054026181" class="mobile-phone">
+                    <i class="fa-solid fa-phone"></i>
+                    +7 705 402 61 81
+                </a>
+                <div class="mobile-social">
+                    <a href="https://www.instagram.com/nelly_dental/" class="mobile-social-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/77054026181" class="mobile-social-link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ─────── Beautiful Hero Section ─────── -->
+    <section class="doctors-hero-beautiful">
+        <div class="hero-background-doctors">
+            <div class="floating-doctors-shapes">
+                <div class="doctors-shape doctors-shape-1">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div class="doctors-shape doctors-shape-2">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div class="doctors-shape doctors-shape-3">
+                    <i class="fa-solid fa-stethoscope"></i>
+                </div>
+                <div class="doctors-shape doctors-shape-4">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content-doctors">
+                <div class="hero-text-doctors">
+                    <div class="breadcrumb-doctors">
+                        <a href="index.html">Главная</a>
+                        <span class="separator">✦</span>
+                        <span>Врачи</span>
+                    </div>
+                    
+                    <h1 class="hero-title-doctors">
+                        <span class="title-word-doctors" data-text="НАШИ">НАШИ</span>
+                        <span class="title-word-doctors" data-text="ВРАЧИ">ВРАЧИ</span>
+                        <span class="title-accent-doctors">профессионалы своего дела</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle-doctors">
+                        Команда опытных специалистов с многолетним стажем, 
+                        которые используют современные технологии и индивидуальный подход к каждому пациенту.
+                    </p>
+                    
+                    <div class="hero-stats-doctors">
+                        <div class="stat-doctors" data-count="6">
+                            <div class="stat-number-doctors" id="doctorsCount">0</div>
+                            <div class="stat-label-doctors">Специалистов</div>
+                        </div>
+                        <div class="stat-doctors" data-count="14">
+                            <div class="stat-number-doctors">14</div>
+                            <div class="stat-label-doctors">Лет опыта</div>
+                        </div>
+                        <div class="stat-doctors" data-count="98">
+                            <div class="stat-number-doctors">98%</div>
+                            <div class="stat-label-doctors">Довольных пациентов</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta-doctors">
+                        <button class="scroll-to-doctors-btn" onclick="DoctorsPageUtils.scrollToDoctors()">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <span>Познакомиться с врачами</span>
+                            <div class="btn-ripple-doctors"></div>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-visual-doctors">
+                    <div class="team-showcase">
+                        <div class="team-image-main">
+                            <img src="img/full.JPG" alt="Команда врачей Nelly dental clinic" loading="lazy">
+                            <div class="image-overlay-doctors">
+                                <div class="overlay-content">
+                                    <h3>Наша команда</h3>
+                                    <p>Профессионалы с многолетним опытом</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-features">
+                            <div class="feature-item-doctors">
+                                <div class="feature-icon-doctors">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Опытные врачи</h4>
+                                    <p>Стаж от 3 до 14 лет</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item-doctors">
+                                <div class="feature-icon-doctors">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Постоянное обучение</h4>
+                                    <p>Повышение квалификации</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item-doctors">
+                                <div class="feature-icon-doctors">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Рекомендуют</h4>
+                                    <p>98% пациентов</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Data Status Section ─────── -->
+    <section class="doctors-status-section">
+        <div class="container">
+            <div class="data-status-doctors">
+                <div id="doctorsDataStatus" class="status-loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Загрузка информации о врачах...
+                </div>
+                <div id="doctorsLastUpdate" class="last-update"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Filter Section ─────── -->
+    <section class="doctors-filter-section">
+        <div class="container">
+            <div class="filter-header-doctors">
+                <h2>Наши специалисты</h2>
+                <p>Выберите специализацию для поиска нужного врача</p>
+            </div>
+            
+            <div class="doctors-filter-buttons" id="doctorsFilterButtons">
+                <button class="doctors-filter-btn active" data-filter="all">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Все врачи</span>
+                    <div class="filter-count" id="allDoctorsCount">0</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Doctors Grid ─────── -->
+    <section class="doctors-grid-beautiful">
+        <div class="container">
+            <div class="doctors-list-beautiful" id="doctorsList">
+                <!-- Карточки врачей будут загружены динамически -->
+                <div class="loading-doctors">
+                    <div class="loading-spinner">
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+                    </div>
+                    <p>Загружаем информацию о врачах...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────── Doctor Details Modal ─────── -->
+    <div class="doctor-modal-overlay" id="doctorModalOverlay">
+        <div class="doctor-modal" id="doctorModal">
+            <button class="modal-close" id="modalClose">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="doctor-main-info">
+                        <div class="doctor-photo">
+                            <img id="modalDoctorPhoto" src="/placeholder.svg" alt="">
+                        </div>
+                        <div class="doctor-info">
+                            <h2 id="modalDoctorName"></h2>
+                            <p class="doctor-specialization" id="modalDoctorSpecialization"></p>
+                            <div class="doctor-experience" id="modalDoctorExperience"></div>
+                            <div class="doctor-rating-modal">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="rating-text" id="modalDoctorRating"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="book-appointment-btn" id="modalBookBtn">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        <span>Записаться на прием</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="doctor-description-section">
+                        <h3><i class="fa-solid fa-user-doctor"></i> О враче</h3>
+                        <p id="modalDoctorDescription"></p>
+                    </div>
+
+                    <div class="certificates-section" id="certificatesSection">
+                        <h3><i class="fa-solid fa-certificate"></i> Сертификаты и дипломы</h3>
+                        <div class="certificates-grid" id="certificatesGrid">
+                            <!-- Сертификаты будут добавлены динамически -->
+                        </div>
+                    </div>
+
+                    <div class="before-after-section" id="beforeAfterSection">
+                        <h3><i class="fa-solid fa-images"></i> Работы врача</h3>
+                        <div class="before-after-grid" id="beforeAfterGrid">
+                            <!-- Фото до и после будут добавлены динамически -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────── Image Viewer Modal ─────── -->
+    <div class="image-viewer-overlay" id="imageViewerOverlay">
+        <div class="image-viewer">
+            <button class="image-viewer-close" id="imageViewerClose">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <img id="imageViewerImg" src="/placeholder.svg" alt="">
+            <div class="image-viewer-caption" id="imageViewerCaption"></div>
+        </div>
+    </div>
+
+    <!-- ─────── Footer ─────── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <a href="index.html">Nelly dental clinic</a>
+                    </div>
+                    <p>Стоматология 5 звезд</p>
+                    <p>Улы Дала, 35, Город Астана</p>
+                    <p>Пн-Пт 10:00-19:00  Сб, Вс 10:00-16:00</p>
+                    <p>+7 705 402 61 81</p>
+                </div>
+
+                <div class="footer-nav">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="ceny.html">Цены</a></li>
+                        <li><a href="keysy.html">Кейсы</a></li>
+                        <li><a href="vrachi.html">Врачи</a></li>
+                        <li><a href="kontakty.html">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/77054026181" class="social-link">WhatsApp</a><br>
+                        <a href="https://www.instagram.com/nelly_dental/" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Nelly dental clinic. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ─────── JS ─────── -->
+    <script src="js/doctors-script.js"></script>
+</body>
+</html>
