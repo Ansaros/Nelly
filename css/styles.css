@@ -313,7 +313,7 @@ body {
 }
 
 .hero-new-background {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   top: 0;
@@ -342,7 +342,8 @@ body {
 }
 
 .hero-new-content {
-  position: relative;
+  position: absolute;
+  top: 68%;
   z-index: 3;
   text-align: center;
   color: #fff;
@@ -798,6 +799,10 @@ body {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
+
+      .hero-new-content {
+        top: 40%;
+      }
   .hero-content-prices {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -4546,6 +4551,12 @@ body.loaded {
   text-shadow: 0 2px 5px rgba(163, 116, 170, 0.2);
 }
 
+.price-currency-smaller{
+    font-size: 1.4rem;
+  font-weight: 800;
+  color: #a374aa;
+  }
+
 .price-currency {
    font-size: 2rem;
   font-weight: 800;
@@ -4828,6 +4839,14 @@ body.loaded {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
+  .price-smaller {
+      font-size: 1rem;
+  }
+  .price-currency-smaller{
+    font-size: 1rem;
+  font-weight: 800;
+  color: #a374aa;
+  }
   .map-container {
     height: 300px;
     margin-bottom: 40px;
