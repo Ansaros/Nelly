@@ -81,7 +81,7 @@ class DoctorsPageManager {
     this.retryCount = 0
     this.maxRetries = 3
     this.currentFilter = "all"
-    this.imageSize = "w1000" // Размер изображений по умолчанию
+    this.imageSize = "w1500" // Размер изображений по умолчанию
 
     this.init()
   }

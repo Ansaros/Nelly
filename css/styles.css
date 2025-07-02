@@ -803,6 +803,11 @@ body {
     gap: 50px;
     text-align: center;
   }
+
+  .cta-content-beautiful {
+    display: flex !important;
+    flex-direction: column;
+  }
   
   .cta-content-prices {
     grid-template-columns: 1fr;
@@ -4823,6 +4828,22 @@ body.loaded {
     gap: 50px;
     text-align: center;
   }
+
+  .cases-grid-beautiful {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stories-header-beautiful h2 {
+    font-size: 2rem;
+  }
+
+  .contacts-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .case-image-beautiful {
     height: 250px;
   }

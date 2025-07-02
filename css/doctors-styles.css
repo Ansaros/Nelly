@@ -885,12 +885,13 @@ body {
   position: relative;
   height: 300px;
   overflow: hidden;
+  transform: translateY(20px);
 }
 
 .doctor-image-beautiful img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -1194,12 +1195,16 @@ body {
   overflow: hidden;
   border: 4px solid rgba(255, 255, 255, 0.3);
   flex-shrink: 0;
+  margin-top: -10px; /* поднимаем чуть выше */
+  transform: translateY(-10px);
+
+
 }
 
 .doctor-photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .doctor-info h2 {
@@ -1321,7 +1326,7 @@ body {
 .before-after-item img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
