@@ -804,6 +804,11 @@ body {
     text-align: center;
   }
 
+  .hero-content-beautiful {
+    display: flex !important;
+    flex-direction: column;
+  }
+
   .cta-content-beautiful {
     display: flex !important;
     flex-direction: column;
@@ -4823,6 +4828,10 @@ body.loaded {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
+  .map-container {
+    height: 300px;
+    margin-bottom: 40px;
+  }
   .hero-content-prices {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -4832,6 +4841,7 @@ body.loaded {
   .cases-grid-beautiful {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .stories-header-beautiful h2 {
