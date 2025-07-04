@@ -210,7 +210,6 @@ class DoctorsPageManager {
       originalCertificates: originalCertificates, // Сохраняем оригинальные ссылки
       beforeAfterPhotos: convertedBeforeAfterPhotos,
       originalBeforeAfterPhotos: originalBeforeAfterPhotos, // Сохраняем оригинальные ссылки
-      rating: this.generateRating(),
       slug: this.generateSlug(name),
     }
   }
@@ -227,11 +226,6 @@ class DoctorsPageManager {
       .filter((cell) => cell && cell.toString().trim())
       .map((cell) => cell.toString().trim())
       .filter((url) => url.startsWith("http"))
-  }
-
-  // ===== ГЕНЕРАЦИЯ РЕЙТИНГА =====
-  generateRating() {
-    return (4.7 + Math.random() * 0.3).toFixed(1)
   }
 
   // ===== ГЕНЕРАЦИЯ SLUG =====
@@ -306,7 +300,6 @@ class DoctorsPageManager {
         <div class="doctor-content-beautiful">
           <div class="doctor-header-beautiful">
             <h3>${doctor.name}</h3>
-            <div class="doctor-rating">
             </div>
           </div>
           
@@ -421,7 +414,6 @@ class DoctorsPageManager {
     document.getElementById("modalDoctorName").textContent = doctor.name
     document.getElementById("modalDoctorSpecialization").textContent = doctor.specialization
     document.getElementById("modalDoctorExperience").textContent = doctor.experience ? `Стаж: ${doctor.experience}` : ""
-    document.getElementById("modalDoctorRating").textContent = doctor.rating
     document.getElementById("modalDoctorDescription").textContent = doctor.description || "Опытный специалист с индивидуальным подходом к каждому пациенту."
 
     // Устанавливаем обработчик для кнопки записи в модальном окне
