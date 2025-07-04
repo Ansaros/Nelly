@@ -4840,7 +4840,7 @@ body.loaded {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
   .price-smaller {
-      font-size: 1rem;
+      font-size: 1.3rem;
   }
   .price-currency-smaller{
     font-size: 1rem;
@@ -4906,6 +4906,11 @@ body.loaded {
 
   .service-price .price-value {
     font-size: 1.3rem;
+  }
+
+  .service-price {
+    flex-direction: column;
+    margin-bottom: 15px;
   }
 
   .price-currency {
