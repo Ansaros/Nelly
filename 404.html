@@ -1,84 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ОКАК</title>
-</head>
-<body>
-    <style>
-        *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .app{
-        position: relative;
-        height: 100svh;
-        background: #050505;
-        overflow: hidden;
-        font-family: "Montserrat", sans-serif;
-        color: #fff;
-        font-size: 18px;
-    }
-    .img{
-        position: absolute;
-        bottom: 0;
-        max-width: 1920px;
-        margin: 0 auto;
-        animation: catAnim 1.5s ease forwards;
-    }
-    .img img{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    @keyframes catAnim {
-        0%{
-            translate: 0 50%;
-        }
-        100%{
-            translate: 0 0;
-        }
-    }
-    .okak{
-        position: absolute;
-        bottom: 150px;
-        left: 50%;
-        translate: -50% 0;
-        font-weight: 900;
-        font-size: 115px;
-    }
-    .error{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        font-size: 750px;
-        font-weight: 900;
-        transform: translate(-50%, 800px);
-        animation: errorAnim 1.5s ease forwards;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ОКАК</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .app {
+      position: relative;
+      height: 100svh;
+      background: #050505;
+      overflow: hidden;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .img {
+      position: absolute;
+      bottom: 0;
+      max-width: 1920px;
+      margin: 0 auto;
+      animation: catAnim 1.5s ease forwards;
+    }
+
+    .img img {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes catAnim {
+      0% {
+        translate: 0 50%;
+      }
+      100% {
+        translate: 0 0;
+      }
+    }
+
+    .okak {
+      position: absolute;
+      bottom: 150px;
+      left: 50%;
+      translate: -50% 0;
+      font-weight: 900;
+      font-size: 115px;
+    }
+
+    .error {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 750px;
+      font-weight: 900;
+      transform: translate(-50%, 800px);
+      animation: errorAnim 1.5s ease forwards;
+    }
 
     @keyframes errorAnim {
-        100% {
-            transform: translate(-50%, -400px);
-        }
+      100% {
+        transform: translate(-50%, -400px);
+      }
     }
 
-    </style>
+    .home-button {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 15px 30px;
+      background-color: #fff;
+      color: #a374aa;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
 
-     <div class="app">
-        <div class="error">
-            404
-        </div>
-        <div class="img">
-            <img src="img/cat.png" alt="cat">
-            <h1 class="okak">ОКАК</h1>
-        </div>
+    .home-button:hover {
+      background-color: #f0e6f4;
+      transform: translateX(-50%) scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="error">404</div>
+    <div class="img">
+      <img src="img/cat.png" alt="cat" />
+      <h1 class="okak">ОКАК</h1>
     </div>
-
-    
+    <a href="/" class="home-button">Вернуться домой</a>
+  </div>
 </body>
 </html>
