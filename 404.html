@@ -31,18 +31,22 @@
       position: relative;
       padding: 20px;
     }
+    a.logo {
+    text-decoration: none;
+    }
 
     .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-weight: 700;
-      font-size: 1.6rem;
-      letter-spacing: 2px;
-      z-index: 3;
-      color: #fff;
-      text-shadow: 0 0 12px var(--text-glow);
-      animation: float 4s ease-in-out infinite;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    z-index: 3;
+    color: #fff;
+    text-shadow: 0 0 12px var(--text-glow);
+    animation: float 4s ease-in-out infinite;
+    text-decoration: none; 
     }
 
     .top-right-text {
@@ -211,7 +215,8 @@
   </style>
 </head>
 <body>
-  <div class="logo">NellyDental</div>
+  <a href="/" class="logo">NellyDental</a>
+
   <div class="top-right-text">Потрясающе выглядите</div>
 
   <div class="text-wrapper">
