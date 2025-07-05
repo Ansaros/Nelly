@@ -622,46 +622,54 @@ body {
   padding: 100px 0;
 }
 
-.ratings-grid {
-  display: flex;
-  justify-content: center;
-}
+  .ratings-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* <-- увеличивает расстояние между карточками */
+    padding: 40px 20px;
+  }
 
-.rating-card {
-  background: white;
-  padding: 40px;
-  width: 50%;
-  border-radius: 15px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+  .rating-card {
+    background: #fff;
+    color: #333;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    padding: 30px 20px;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .rating-card:hover {
+    transform: translateY(-5px);
+  }
 
-.rating-icon img {
-  border-radius: 10px;
-}
+  .rating-icon img {
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
 
-.rating-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #333;
-  margin: 20px 0 10px;
-}
+  .rating-title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
 
-.rating-link a {
-  color: #a374aa;
-  text-decoration: none;
-}
+  .rating-link a {
+    color: #a374aa;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .rating-score {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #444;
+  }
 
-.rating-score {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #666;
-}
-
-.rating-score strong {
-  color: #a374aa;
-  font-size: 2rem;
-}
+  .rating-score strong {
+    font-size: 24px;
+    color: #a374aa;
+  }
 
 /* ===== TESTIMONIALS SECTION ===== */
 .testimonials-main {
