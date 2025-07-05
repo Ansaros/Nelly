@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ОКАК</title>
+  <title>404 Not Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --main-color: #a374aa;
+      --text-glow: rgba(255, 255, 255, 0.6);
+      --shadow-glow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -12,99 +19,186 @@
     }
 
     body {
-      font-family: "Montserrat", sans-serif;
-    }
-
-    .app {
-      position: relative;
-      height: 100svh;
-      background: #050505;
-      overflow: hidden;
-      color: #fff;
-      font-size: 18px;
-    }
-
-    .img {
-      position: absolute;
-      bottom: 0;
-      max-width: 1920px;
-      margin: 0 auto;
-      animation: catAnim 1.5s ease forwards;
-    }
-
-    .img img {
+      background: radial-gradient(circle at center, #a374aa, #472c57);
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      height: 100vh;
       display: flex;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
     }
 
-    @keyframes catAnim {
-      0% {
-        translate: 0 50%;
-      }
-      100% {
-        translate: 0 0;
-      }
-    }
-
-    .okak {
+    .logo {
       position: absolute;
-      bottom: 150px;
-      left: 50%;
-      translate: -50% 0;
-      font-weight: 900;
-      font-size: 115px;
+      top: 20px;
+      left: 30px;
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      z-index: 10;
+      color: #fff;
+      text-shadow: 0 0 12px var(--text-glow);
     }
 
-    .error {
+    .top-right-text {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 750px;
-      font-weight: 900;
-      transform: translate(-50%, 800px);
-      animation: errorAnim 1.5s ease forwards;
+      top: 20px;
+      right: 30px;
+      font-size: 1rem;
+      opacity: 0.85;
+      z-index: 10;
+      color: #fff;
+      font-weight: 500;
+      text-shadow: 0 0 8px var(--text-glow);
     }
 
-    @keyframes errorAnim {
-      100% {
-        transform: translate(-50%, -400px);
-      }
+    .text-wrapper {
+      position: relative;
+      z-index: 2;
+      margin-right: 28%;
+      animation: fadeIn 1.2s ease-out forwards;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 10rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #fff, #ffd6ff, #fff);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse 5s infinite linear;
+      text-shadow: var(--shadow-glow);
+    }
+
+    p {
+      font-size: 1.5rem;
+      max-width: 480px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+      opacity: 0.95;
     }
 
     .home-button {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 15px 30px;
-      background-color: #fff;
-      color: #a374aa;
-      font-weight: 700;
+      padding: 14px 32px;
+      background-color: white;
+      color: var(--main-color);
       border: none;
-      border-radius: 8px;
-      font-size: 18px;
+      border-radius: 14px;
       cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem;
       transition: all 0.3s ease;
-      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
 
     .home-button:hover {
-      background-color: #f0e6f4;
-      transform: translateX(-50%) scale(1.05);
+      background-color: #f5f5f5;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.25);
     }
 
+    .cat-img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 85%;
+      max-width: 47%;
+      object-fit: contain;
+      z-index: 1;
+      animation: slideUp 1.5s ease-out forwards;
+      filter: drop-shadow(0 0 15px rgba(0,0,0,0.3));
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulse {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @media (max-width: 1024px) {
+      .text-wrapper {
+        margin: 0 40px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 7rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+
+      .cat-img {
+        max-width: 60%;
+        opacity: 0.5;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+
+      .cat-img {
+        max-width: 90%;
+        opacity: 0.3;
+      }
+
+      .home-button {
+        font-size: 0.95rem;
+        padding: 12px 28px;
+      }
+
+      .logo,
+      .top-right-text {
+        font-size: 0.85rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="app">
-    <div class="error">404</div>
-    <div class="img">
-      <img src="img/cat.png" alt="cat" />
-      <h1 class="okak">ОКАК</h1>
-    </div>
-    <a href="/" class="home-button">Вернуться домой</a>
+  <div class="logo">NellyDental</div>
+  <div class="top-right-text">Потрясающе выглядите</div>
+
+  <div class="text-wrapper">
+    <h1>404</h1>
+    <p>Кажется, мы слегка потерялись… Мяу-р-р! Эта страница больше похожа на коробку, в которой никого нет.</p>
+    <button class="home-button" onclick="location.href='/'">Вернуться домой</button>
   </div>
+
+  <img class="cat-img" src="img/cat.png" alt="Милый кот" />
 </body>
 </html>
